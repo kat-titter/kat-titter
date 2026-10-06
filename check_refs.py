@@ -4,7 +4,8 @@ import re,sys
 for f in sys.argv[1:] or ['resume.html']:
     s=open(f,encoding='utf-8').read()
     p2=s.split('<div class="page p2">')[1]
-    entries=re.findall(r'<li>(.*?)</li>',p2.split('<h2>Conference')[0],re.S)
+    pubs=re.split(r'<h2>',p2)[1]  # first page-2 section = peer-reviewed publications
+    entries=re.findall(r'<li>(.*?)</li>',pubs,re.S)
     def key(e):
         j=re.search(r'<i>([^<]+)</i>\. (\d{4})',e); return f'{j.group(1)} {j.group(2)}'
     order={key(e):i+1 for i,e in enumerate(entries)}
