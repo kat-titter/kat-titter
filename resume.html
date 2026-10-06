@@ -18,6 +18,7 @@
 
   /* Header */
   header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;}
+  .first header{ border-bottom:1px solid var(--rule); padding-bottom:6px; }
   .head-left{flex:1;}
   h1{ font-size:27px; font-weight:700; letter-spacing:-0.5px; margin:0 0 4px; }
   h1 .kat{ font-family:"IBM Plex Mono","SF Mono",Menlo,monospace; font-weight:500; color:var(--muted); letter-spacing:-1px; margin-right:1px; }
@@ -34,13 +35,13 @@
   .tldr .lab{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:8px; font-weight:500; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin-right:7px; vertical-align:1px; }
 
   /* Impact strip */
-  .impact{ display:flex; gap:8px; margin:9px 0 0; }
+  .impact{ display:flex; gap:8px; margin:10px 0 0; }
   .impact div{ flex:1; background:var(--soft); border-radius:9px; padding:6px 10px 6px; }
-  .impact .n{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:14px; font-weight:500; color:var(--ink); line-height:1.1; letter-spacing:-0.3px; }
-  .impact .c{ font-size:9px; color:var(--body); line-height:1.35; margin-top:3px; }
+  .impact .n{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:14px; font-weight:500; color:var(--ink); height:16px; line-height:16px; letter-spacing:-0.3px; white-space:nowrap; }
+  .impact .c{ font-size:9px; color:var(--body); line-height:1.35; margin-top:4px; }
 
   /* Section heads */
-  h2{ font-family:"IBM Plex Mono","SF Mono",Menlo,monospace; font-size:10.4px; font-weight:500; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink); margin:11px 0 6px; padding-bottom:3px; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
+  h2{ font-family:"IBM Plex Mono","SF Mono",Menlo,monospace; font-size:10.4px; font-weight:500; text-transform:uppercase; letter-spacing:1.5px; color:var(--ink); margin:10px 0 6px; padding-bottom:3px; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
   h2 .key{ letter-spacing:0.2px; text-transform:none; font-size:8px; color:var(--faint); font-weight:400; }
 
   /* Entries */
@@ -50,6 +51,8 @@
   .role .sub{font-weight:400;color:var(--body);font-size:10px;}
   .role .dot{color:var(--faint);font-weight:400;margin:0 5px;}
   .meta{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5px; color:var(--muted); white-space:nowrap; }
+  .meta .loc{ display:inline-block; text-align:right; color:var(--faint); margin-right:10px; }
+  .meta .dt{ display:inline-block; width:82px; text-align:right; }
   ul.b{ margin:3px 0 0; padding:0 0 0 11px; }
   ul.b li{ color:var(--body); line-height:1.4; margin:0 0 1px; padding-left:2px; }
   ul.b li::marker{ color:var(--faint); }
@@ -72,17 +75,17 @@
   .p2 h1{font-size:18px;}
   .p2 .pagetag{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:7.8px; color:var(--faint); white-space:nowrap; }
   ol.cites{margin:0;padding:0 0 0 24px;}
-  ol.cites li{ font-size:9.2px;color:var(--body);line-height:1.45;margin-bottom:6px;padding-left:3px; }
+  ol.cites li{ font-size:10px;color:var(--body);line-height:1.45;margin-bottom:6px;padding-left:3px; }
   ol.cites li::marker{ font-family:"IBM Plex Mono",Menlo,monospace; color:var(--muted); content:"[" counter(list-item) "] "; }
   ol.cites b{color:var(--ink);}
   ol.cites i{color:var(--muted);}
   ol.cites a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px;}
-  .ids{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:7.6px; color:var(--faint); }
+  .ids{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:8px; color:var(--faint); }
   .pubs .ref{ color:var(--faint); }
   .inst{ font-family:"IBM Plex Mono",Menlo,monospace; font-size:7.2px; letter-spacing:0.6px; text-transform:uppercase; color:var(--muted); border:1px solid var(--rule); border-radius:4px; padding:0 4px; margin-left:4px; white-space:nowrap; vertical-align:1px; }
-  .earlier{font-size:8.8px;color:var(--muted);font-style:italic;margin:8px 0 3px;}
+  .earlier{font-size:9.4px;color:var(--muted);font-style:italic;margin:8px 0 3px;}
   ul.posters{margin:0;padding:0 0 0 14px;}
-  ul.posters li{font-size:9px;color:var(--body);line-height:1.45;margin-bottom:3px;}
+  ul.posters li{font-size:9.6px;color:var(--body);line-height:1.45;margin-bottom:3px;}
   ul.posters li::marker{color:var(--faint);}
   .foot{ position:absolute;left:0.55in;right:0.55in;bottom:0.32in; font-family:"IBM Plex Mono",Menlo,monospace; font-size:7.2px;color:var(--faint); display:flex;justify-content:space-between; border-top:1px solid var(--rule);padding-top:4px; }
 </style>
@@ -126,7 +129,7 @@
   <div class="entry">
     <div class="entry-head">
       <div class="role">Axiom Bio <span class="sub"><span class="dot">·</span>Founding Member of the Technical Staff</span></div>
-      <div class="meta">2023–present · San Francisco, CA</div>
+      <div class="meta"><span class="loc">San Francisco, CA</span><span class="dt">2023–present</span></div>
     </div>
     <ul class="b">
       <li>Owned image labeling and segmentation: PyTorch U-Net models over 100,000+ compound Cell Painting images, in production 1+ year.</li>
@@ -139,7 +142,7 @@
   <div class="entry">
     <div class="entry-head">
       <div class="role">Insitro <span class="sub"><span class="dot">·</span>Associate Scientist III, Arrayed Screening, Neuroscience</span></div>
-      <div class="meta">2022–2023 · South San Francisco, CA</div>
+      <div class="meta"><span class="loc">South San Francisco, CA</span><span class="dt">2022–2023</span></div>
     </div>
     <ul class="b">
       <li>Onboarded two neuroscience screens (TSC, ALS) onto automated platforms; imaged hundreds of 384-well plates, analyzed in Python.</li>
@@ -150,7 +153,7 @@
   <div class="entry">
     <div class="entry-head">
       <div class="role">MIT, Synthetic Neurobiology Group <span class="sub"><span class="dot">·</span>Technical Associate II</span></div>
-      <div class="meta">2021–2022 · Cambridge, MA</div>
+      <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2021–2022</span></div>
     </div>
     <ul class="b">
       <li>Imaged 30+ proteins at nanoscale by optimizing multiplexed expansion revealing (mExR) for 7+ IHC rounds on 16× expanded tissue.</li>
@@ -162,7 +165,7 @@
   <div class="entry">
     <div class="entry-head">
       <div class="role">AbbVie, Foundational Neuroscience Center <span class="sub"><span class="dot">·</span>Associate Scientist II</span></div>
-      <div class="meta">2018–2021 · Cambridge, MA</div>
+      <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2018–2021</span></div>
     </div>
     <ul class="b">
       <li>Built primary murine and hiPSC neuron tau-aggregation high-content assays (Revvity Opera, Harmony) to rank Alzheimer's lead candidates.</li>
@@ -174,7 +177,7 @@
   <div class="entry">
     <div class="entry-head">
       <div class="role">Massachusetts General Hospital <span class="sub"><span class="dot">·</span>Research Technician I</span></div>
-      <div class="meta">2017–2018 · Boston, MA</div>
+      <div class="meta"><span class="loc">Boston, MA</span><span class="dt">2017–2018</span></div>
     </div>
     <ul class="b">
       <li>Recorded and analyzed voltage-clamp currents from GABA-A-receptor <i>Xenopus</i> oocytes to resolve mechanisms of general anesthetics.</li>
@@ -185,16 +188,16 @@
   <h2>Projects</h2>
   <div class="proj">
     <div class="entry">
-      <div class="entry-head"><div class="role">Bare Metal <span class="sub"><span class="dot">·</span>Solo generative-art exhibit, Human Tech Week, SF; concept, fabrication and post-hoc analysis (macrofluidic.me/blog)</span></div><div class="meta">2025</div></div>
+      <div class="entry-head"><div class="role">Bare Metal <span class="sub"><span class="dot">·</span>Solo generative-art exhibit, Human Tech Week, SF; concept, fabrication and post-hoc analysis (macrofluidic.me/blog)</span></div><div class="meta"><span class="dt">2025</span></div></div>
     </div>
     <div class="entry">
-      <div class="entry-head"><div class="role">Vivarium 2.0 <span class="sub"><span class="dot">·</span>Designed and built an automated poison-dart-frog habitat: misting control, motion-triggered live video</span></div><div class="meta">2024</div></div>
+      <div class="entry-head"><div class="role">Vivarium 2.0 <span class="sub"><span class="dot">·</span>Designed and built an automated poison-dart-frog habitat: misting control, motion-triggered live video</span></div><div class="meta"><span class="dt">2024</span></div></div>
     </div>
     <div class="entry">
-      <div class="entry-head"><div class="role">OpenTronsformers <span class="sub"><span class="dot">·</span>LLM code-generation companion that lets wet-lab scientists drive the OT-2 robot; 2nd place, BioHack NYC</span></div><div class="meta">2023</div></div>
+      <div class="entry-head"><div class="role">OpenTronsformers <span class="sub"><span class="dot">·</span>LLM code-generation companion that lets wet-lab scientists drive the OT-2 robot; 2nd place, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
     </div>
     <div class="entry">
-      <div class="entry-head"><div class="role">Open source <span class="sub"><span class="dot">·</span>github.com/kat-titter: vanitas-veritas, diffusion video pipeline; claude-code-learns, reusable agent skills from corrections</span></div><div class="meta">2026</div></div>
+      <div class="entry-head"><div class="role">Open source <span class="sub"><span class="dot">·</span>github.com/kat-titter: vanitas-veritas, diffusion video pipeline; claude-code-learns, reusable agent skills from corrections</span></div><div class="meta"><span class="dt">2026</span></div></div>
     </div>
   </div>
 
@@ -202,13 +205,13 @@
   <div class="entry">
     <div class="entry-head">
       <div class="role">Harvard Extension School <span class="sub"><span class="dot">·</span>Graduate coursework (Python; image processing &amp; computer vision; social medicine), while employed full-time</span></div>
-      <div class="meta">2017–2020</div>
+      <div class="meta"><span class="dt">2017–2020</span></div>
     </div>
   </div>
   <div class="entry">
     <div class="entry-head">
       <div class="role">B.A., Colgate University <span class="sub"><span class="dot">·</span><i>cum laude</i></span></div>
-      <div class="meta">2013–2017</div>
+      <div class="meta"><span class="dt">2013–2017</span></div>
     </div>
     <p class="desc">Cellular Neuroscience major, Mathematical Systems Biology minor; biophysics, neuroethology. Co-captain, Division I Track &amp; Field.</p>
   </div>
