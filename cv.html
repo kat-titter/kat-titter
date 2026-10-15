@@ -18,17 +18,17 @@
   @media screen{ body{background:#e9e9e9;} .page{background:#fff; margin:12px auto; box-shadow:0 1px 6px rgba(0,0,0,.15);} }
 
   /* Header */
-  header{ border-bottom:1px solid var(--rule); padding-bottom:7pt; }
+  header{ border-bottom:1px solid var(--rule); padding-bottom:6pt; }
   h1{ font-size:22pt; font-weight:700; letter-spacing:-0.4pt; margin:0 0 2pt; line-height:1.1; }
   h1 .kat{ font-family:"IBM Plex Mono","SF Mono",Menlo,monospace; font-weight:500; color:var(--muted); letter-spacing:-0.8pt; margin-right:1px; }
   .pos{ font-size:10pt; color:var(--ink); margin:0 0 3pt; }
   .contact{ font-size:9pt; color:var(--muted); line-height:1.4; }
   .contact span{ margin:0 5pt; }
   .contact a{ color:inherit; text-decoration:none; }
-  .summary{ margin:6pt 0 0; color:var(--body); }
+  .summary{ margin:5pt 0 0; color:var(--body); }
 
   /* Sections */
-  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:10pt 0 4pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
+  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:9pt 0 4pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
   h2 .key{ font-size:9pt; text-transform:none; letter-spacing:0; color:var(--muted); font-weight:400; }
 
   /* Entries */
@@ -59,6 +59,7 @@
   .pagetag{ font-size:9pt; color:var(--muted); white-space:nowrap; }
   ol.cites{ margin:0; padding:0 0 0 26pt; }
   ol.cites li{ color:var(--body); margin-bottom:5pt; padding-left:2pt; }
+  .doc ol.cites li{ margin-bottom:4pt; }
   ol.cites li::marker{ font-family:"IBM Plex Mono",Menlo,monospace; color:var(--muted); content:"[" counter(list-item) "] "; }
   ol.cites b{ color:var(--ink); }
   ol.cites i{ color:var(--body); }
@@ -87,7 +88,7 @@
   .foot{ position:absolute; left:0.6in; right:0.6in; bottom:0.3in; font-size:8.5pt; color:var(--muted); display:flex; justify-content:space-between; border-top:1px solid var(--rule); padding-top:3pt; }
 
   /* ---- CV: flowing multi-page document on the shared resume styles ---- */
-  @page{ size:Letter; margin:0.6in 0.6in 0.7in;
+  @page{ size:Letter; margin:0.55in 0.6in 0.65in;
     @bottom-left{ content:"Katherine (Kat) Titterton · Curriculum Vitae"; font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; }
     @bottom-right{ content:"page " counter(page) " of " counter(pages); font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; } }
   .doc{ max-width:7.3in; margin:0 auto; }
@@ -252,8 +253,6 @@
   <div class="entry"><div class="entry-head"><div class="role"><b>Dorothy-Waltham Award for Athletic Leadership</b><span class="dot">·</span><span class="title">Colgate University</span></div><div class="meta"><span class="dt">2017</span></div></div></div>
   <div class="entry"><div class="entry-head"><div class="role"><b><i>cum laude</i></b><span class="dot">·</span><span class="title">Colgate University</span></div><div class="meta"><span class="dt">2017</span></div></div></div>
 
-  <h2>Professional memberships</h2>
-  <p class="desc">Society of Toxicology (SOT) · Society for Neuroscience (SfN) · Society of Biomolecular Imaging and Informatics (SBI2)</p>
 
   <h2>Skills</h2>
   <div class="skills">
@@ -262,8 +261,9 @@
     <p><b>Lab &amp; automation:</b> primary murine and human iPSC neuron culture; microfluidic culture models; immunocytochemistry and immunohistochemistry; assay development; high-throughput, high-content screening; stereotaxic surgery and tissue microdissection; liquid handlers and schedulers (OpenTrons, Integra, BioTek, Labcyte Echo, HighRes Biosolutions, Green Button Go); Benchling</p>
   </div>
 
-  <h2>Certifications</h2>
-  <p class="desc">FII Level 1 Freediving (Oct 2019) · Molchanov Level 2 Freediving (Oct 2025) · SII Shark Ecology Specialty (Apr 2020)</p>
+  <h2>Memberships &amp; certifications</h2>
+  <p class="desc"><b>Memberships:</b> Society of Toxicology (SOT) · Society for Neuroscience (SfN) · Society of Biomolecular Imaging and Informatics (SBI2)</p>
+  <p class="desc"><b>Certifications:</b> FII Level 1 Freediving (Oct 2019) · Molchanov Level 2 Freediving (Oct 2025) · SII Shark Ecology Specialty (Apr 2020)</p>
 
 </div>
 
