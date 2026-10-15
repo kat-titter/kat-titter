@@ -32,7 +32,7 @@
   h2 .key{ font-size:9pt; text-transform:none; letter-spacing:0; color:var(--muted); font-weight:400; }
 
   /* Entries */
-  .entry{ margin-bottom:6pt; }
+  .entry{ margin-bottom:5pt; }
   .entry-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10pt; }
   .role{ font-size:10.5pt; }
   .role b{ font-weight:700; }
@@ -49,7 +49,8 @@
   .desc{ margin:1pt 0 0; color:var(--body); }
 
   /* Skills: single column rows */
-  .skills p{ margin:0 0 2pt; color:var(--body); }
+  .rows .entry{ margin-bottom:3pt; }
+  .skills p{ margin:0 0 1pt; color:var(--body); }
   .skills b{ font-weight:700; color:var(--ink); }
 
   /* Page 2 */
@@ -116,7 +117,7 @@
       San Francisco, CA<span>·</span><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a><span>·</span><a href="https://www.macrofluidic.me">macrofluidic.me</a><span>·</span>ORCID <a href="https://orcid.org/0009-0008-3579-1793">0009-0008-3579-1793</a><br>
       <a href="https://github.com/kat-titter">github.com/kat-titter</a><span>·</span><a href="https://www.linkedin.com/in/katherine-titterton-70011699/">linkedin.com/in/katherine-titterton-70011699</a><span>·</span><a href="https://twitter.com/KatTitterton">X @KatTitterton</a>
     </div>
-    <p class="summary">Neuroscientist-engineer at the seam of imaging, signal extraction, and machine learning. Eight years across academia (MGH, MIT), big pharma (AbbVie) and ML-first biotech (Insitro, Axiom Bio) have given a wide view of how science gets done, and of the biases that shape it. Self-taught coder: took graduate night courses in Python (2019) and computer vision (2020, during COVID), then spent nights and weekends automating data analysis in Python and R, before AI could write code. Has kept automating the bench since, from liquid-handler scheduling and R dose-response pipelines to PyTorch segmentation, and now builds with agentic coding. Values superb technical execution over author order: co-author of eight peer-reviewed papers, including two in <i>Nature Communications</i>, contributing the assays, imaging and analysis behind them.</p>
+    <p class="summary">Interdisciplinary neuroscientist-engineer across imaging, signal extraction and machine learning: thinks in numbers and math, and tells the result as a story. Eight years across academia (MGH, MIT), big pharma (AbbVie) and ML-first biotech (Insitro, Axiom Bio) have given a wide view of how science gets done, and of the biases that shape it. Self-taught coder: took graduate night courses in Python (2019) and computer vision (2020, during COVID), then spent nights and weekends automating data analysis in Python and R, before AI could write code. Has kept automating the bench since, from liquid-handler scheduling and R dose-response pipelines to PyTorch segmentation, and now builds with agentic coding. Values superb technical execution over author order: co-author of eight peer-reviewed papers, including two in <i>Nature Communications</i>, contributing the assays, imaging and analysis behind them.</p>
   </header>
 
   <h2>Selected contributions <span class="key">[n] = publication number below</span></h2>
@@ -239,8 +240,8 @@
 
   <h2>Independent work <span class="key">2026–present · questions explored with AI agents</span></h2>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot">·</span><span class="title">Do my cells look normal? An AI × bio venture pitch</span></div><div class="meta"><span class="dt">2026</span></div></div>
-    <p class="desc">Every result is a difference from a control, and nobody checks the control against other labs. On 93,228 public control wells from 1,872 plates in 11 labs, a classifier names the lab from controls alone at 99.9% balanced accuracy, and a lab's drift predicts disagreement on known answers. <a href="https://github.com/kat-titter/datum-line">code and evidence</a></p>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot">·</span><span class="title">Designing my ideal AI × bio startup</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <p class="desc">What would the right startup be for my own strengths, work and the state of the field? A venture pitch built on one question, "do my cells look normal?" Every result is a difference from a control, and nobody checks the control against other labs. On 93,228 public control wells from 1,872 plates in 11 labs, a classifier names the lab from controls alone at 99.9% balanced accuracy, and a lab's drift predicts disagreement on known answers. <a href="https://github.com/kat-titter/datum-line">code and evidence</a></p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot">·</span><span class="title">AI slop as vanitas</span></div><div class="meta"><span class="dt">2026</span></div></div>
@@ -275,6 +276,7 @@
   <div class="skills">
     <p><b>ML &amp; data:</b> PyTorch; U-Net segmentation (SAM evaluated); image embeddings (visualization, clustering, feature derivation, normalization); Python (NumPy, SciPy, scikit-learn, pandas, matplotlib, seaborn, Jupyter); R (tidyverse, ggplot2, drc, platetools); dose-response curve fitting (Prism, R, Python); univariate and multivariate statistics; design of experiments; agentic coding (Claude Code, Cursor)</p>
     <p><b>Imaging &amp; signal:</b> high-content and confocal microscopy (Opera Phenix, Operetta, Harmony); expansion microscopy; phase-contrast timecourse imaging; voltage-clamp electrophysiology; ImageJ/Fiji macros; MATLAB</p>
+    <p><b>Story &amp; design:</b> data visualization and figure generation; pitch-deck and web design; generative art (Midjourney, Stable Diffusion); scientific storytelling for talks and posters</p>
     <p><b>Lab &amp; automation:</b> primary murine and human iPSC neuron culture; microfluidic culture models; immunocytochemistry and immunohistochemistry; assay development; high-throughput, high-content screening; stereotaxic surgery and tissue microdissection; liquid handlers and schedulers (OpenTrons, Integra, BioTek, Labcyte Echo, HighRes Biosolutions, Green Button Go); Benchling</p>
   </div>
 
