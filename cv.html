@@ -13,54 +13,59 @@
   html,body{margin:0;padding:0;}
   body{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; color:var(--ink); font-size:10pt; line-height:1.3; -webkit-font-smoothing:antialiased; background:#fff; }
   .mono,.pos,.contact,h2,.meta,.pubs,.foot,.inst,.ids,.pagetag{ font-family:"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace; }
-  .page{ width:8.5in; height:11in; padding:0.5in 0.6in 0.45in; margin:0 auto; overflow:hidden; position:relative; }
+  .page{ width:8.5in; height:11in; padding:0.7in 0.75in 0.6in; margin:0 auto; overflow:hidden; position:relative; }
   .page.first{ page-break-after:always; break-after:page; }
   @media screen{ body{background:#e9e9e9;} .page{background:#fff; margin:12px auto; box-shadow:0 1px 6px rgba(0,0,0,.15);} }
 
   /* Header */
-  header{ border-bottom:1px solid var(--rule); padding-bottom:5pt; }
+  header{ padding-bottom:0; }
   h1{ font-size:22pt; font-weight:700; letter-spacing:-0.4pt; margin:0 0 2pt; line-height:1.1; }
   h1 .kat{ font-family:"IBM Plex Mono","SF Mono",Menlo,monospace; font-weight:500; color:var(--muted); letter-spacing:-0.8pt; margin-right:1px; }
-  .pos{ font-size:10pt; color:var(--ink); margin:0 0 3pt; }
-  .contact{ font-size:9pt; color:var(--muted); line-height:1.4; }
-  .contact span{ margin:0 5pt; }
+  .pos{ font-size:10pt; color:var(--ink); margin:0 0 7pt; }
+  .contact{ font-size:9pt; color:var(--muted); line-height:1.45; }
+  .contact .gap{ display:inline-block; width:16pt; }
+  .hgrid{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:26pt; align-items:start; }
+  ul.contact{ list-style:none; margin:0; padding:0; white-space:nowrap; }
+  ul.contact a{ display:inline-flex; align-items:center; gap:5pt; }
+  .ico{ width:9pt; height:9pt; fill:currentColor; flex:none; }
   .contact a{ color:inherit; text-decoration:none; }
-  .summary{ margin:5pt 0 0; color:var(--body); }
+  .summary{ margin:0; color:var(--body); max-width:80ch; }
+  .summary + .summary{ margin-top:5pt; }
 
   /* Sections */
-  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:8pt 0 4pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
+  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:16pt 0 5pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
   h2 .key{ font-size:9pt; text-transform:none; letter-spacing:0; color:var(--muted); font-weight:400; }
 
   /* Entries */
-  .entry{ margin-bottom:5pt; }
+  .entry{ margin-bottom:8pt; }
   .entry-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10pt; }
   .role{ font-size:10.5pt; }
   .role b{ font-weight:700; }
   .role .title{ color:var(--ink); }
-  .role .dot{ color:var(--muted); margin:0 4pt; }
+  .role .dot{ display:inline-block; width:10pt; }
   .meta{ font-size:9pt; color:var(--muted); white-space:nowrap; }
-  .meta .loc{ margin-right:10pt; }
+  .meta .loc{ display:inline-block; width:95pt; text-align:left; }
   .meta .dt{ display:inline-block; width:80pt; text-align:right; color:var(--ink); }
   ul.b{ margin:2pt 0 0; padding:0 0 0 12pt; }
-  ul.b li{ color:var(--body); margin:0 0 1pt; padding-left:1pt; }
+  ul.b li{ color:var(--body); margin:0 0 2.5pt; padding-left:1pt; }
   ul.b li::marker{ color:var(--muted); }
   .pubs{ margin:1pt 0 0 13pt; font-size:9pt; color:var(--muted); }
-  .pubs .sep{ margin:0 4pt; }
+  .pubs .sep{ display:inline-block; width:12pt; }
   .desc{ margin:1pt 0 0; color:var(--body); }
 
   /* Skills: single column rows */
-  .rows .entry{ margin-bottom:3pt; }
+  .rows .entry{ margin-bottom:4pt; }
   .skills p{ margin:0 0 1pt; color:var(--body); }
   .skills b{ font-weight:700; color:var(--ink); }
 
   /* Page 2 */
   .p2 header{ display:flex; justify-content:space-between; align-items:baseline; }
   .p2 h1{ font-size:16pt; }
-  .p2 h1 .sub{ font-weight:400; color:var(--muted); font-size:12pt; }
+  .p2 h1 .sub{ font-weight:400; color:var(--muted); font-size:12pt; margin-left:8pt; }
   .pagetag{ font-size:9pt; color:var(--muted); white-space:nowrap; }
   ol.cites{ margin:0; padding:0 0 0 26pt; }
   ol.cites li{ color:var(--body); margin-bottom:5pt; padding-left:2pt; }
-  .doc ol.cites li{ margin-bottom:4pt; }
+  .doc ol.cites li{ margin-bottom:6pt; }
   ol.cites li::marker{ font-family:"IBM Plex Mono",Menlo,monospace; color:var(--muted); content:"[" counter(list-item) "] "; }
   ol.cites b{ color:var(--ink); }
   ol.cites i{ color:var(--body); }
@@ -84,21 +89,24 @@
     .entry-head, h2, .p2 header{ flex-wrap:wrap; }
     .meta{ white-space:normal; }
     .meta .dt{ width:auto; margin-left:0; }
+    .hgrid{ grid-template-columns:1fr; gap:10pt; }
+    ul.contact{ white-space:normal; display:flex; flex-wrap:wrap; gap:2pt 14pt; }
+    .meta .loc{ width:auto; margin-right:10pt; }
     .foot{ position:static; margin-top:16px; }
   }
-  .foot{ position:absolute; left:0.6in; right:0.6in; bottom:0.3in; font-size:8.5pt; color:var(--muted); display:flex; justify-content:space-between; border-top:1px solid var(--rule); padding-top:3pt; }
+  .foot{ position:absolute; left:0.75in; right:0.75in; bottom:0.3in; font-size:8.5pt; color:var(--muted); display:flex; justify-content:space-between; border-top:1px solid var(--rule); padding-top:3pt; }
 
   /* ---- CV: flowing multi-page document on the shared resume styles ---- */
-  @page{ size:Letter; margin:0.55in 0.6in 0.65in;
-    @bottom-left{ content:"Katherine (Kat) Titterton · Curriculum Vitae"; font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; }
+  @page{ size:Letter; margin:0.75in 0.75in 0.8in;
+    @bottom-left{ content:"Katherine (Kat) Titterton, Curriculum Vitae"; font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; }
     @bottom-right{ content:"page " counter(page) " of " counter(pages); font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; } }
   .doc{ max-width:7.3in; margin:0 auto; }
-  h1 .cvtag{ font-weight:400; color:var(--muted); font-size:13pt; letter-spacing:0; }
+  h1 .cvtag{ font-weight:400; color:var(--muted); font-size:13pt; letter-spacing:0; margin-left:10pt; }
   h2{ break-after:avoid; }
-  ol.cites li, ul.b li, .entry-head{ break-inside:avoid; }
+  ul.b li, .entry-head{ break-inside:avoid; }
+  ol.cites li{ orphans:2; widows:2; }
   .entry-head{ break-after:avoid; }
   .pubs{ break-before:avoid; }
-  .entry ul.b li:last-child{ break-after:avoid; }
   .doc > ul.b{ margin-bottom:2pt; }
   .ids{ font-size:8.5pt; color:var(--muted); }
   .sublabel{ font-size:9pt; color:var(--muted); margin:6pt 0 2pt; }
@@ -111,13 +119,24 @@
 <div class="doc">
 
   <header>
-    <h1><span class="kat">Kat</span>herine L. Titterton <span class="cvtag">· Curriculum Vitae</span></h1>
-    <div class="pos">Scientist-engineer and technical storyteller · neuroscience, imaging, AI</div>
-    <div class="contact">
-      San Francisco, CA<span>·</span><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a><span>·</span><a href="https://www.macrofluidic.me">macrofluidic.me</a><span>·</span>ORCID <a href="https://orcid.org/0009-0008-3579-1793">0009-0008-3579-1793</a><br>
-      <a href="https://github.com/kat-titter">github.com/kat-titter</a><span>·</span><a href="https://www.linkedin.com/in/katherine-titterton-70011699/">linkedin.com/in/katherine-titterton-70011699</a><span>·</span><a href="https://twitter.com/KatTitterton">X @KatTitterton</a>
+    <h1><span class="kat">Kat</span>herine L. Titterton <span class="cvtag">Curriculum Vitae</span></h1>
+    <div class="pos">Scientist-engineer and technical storyteller in neuroscience, imaging and AI</div>
+    <div class="hgrid">
+      <div>
+        <p class="summary">Neuroscientist-engineer at the seam of imaging, signal extraction and machine learning. Follows a hard question until the tool that answers it works, then makes the case in the room with numbers and a story. Eight years across academia (MGH, MIT), big pharma (AbbVie) and ML-first biotech (Insitro, Axiom Bio) have given a wide view of how science gets done, and of the biases that shape it.</p>
+        <p class="summary">Self-taught coder: took graduate night courses in Python (2019) and computer vision (2020, during COVID), then spent nights and weekends automating data analysis in Python and R, before AI could write code. Has kept automating the bench since, from liquid-handler scheduling and R dose-response pipelines to PyTorch segmentation, and now builds with agentic coding.</p>
+        <p class="summary">Prefers the work to the credit: co-author of eight peer-reviewed papers, including two in <i>Nature Communications</i>, contributing the assays, imaging and analysis behind them.</p>
+      </div>
+      <ul class="contact">
+        <li>San Francisco, CA</li>
+        <li><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a></li>
+        <li><a href="https://www.macrofluidic.me">macrofluidic.me</a></li>
+        <li><a href="https://github.com/kat-titter"><svg class="ico" viewBox="0 0 24 24" aria-label="GitHub" role="img"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>kat-titter</span></a></li>
+        <li><a href="https://www.linkedin.com/in/katherine-titterton-70011699/"><svg class="ico" viewBox="0 0 24 24" aria-label="LinkedIn" role="img"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>Katherine Titterton</span></a></li>
+        <li><a href="https://twitter.com/KatTitterton"><svg class="ico" viewBox="0 0 24 24" aria-label="X" role="img"><path d="M18.9 1.15h3.68l-8.04 9.19L24 22.85h-7.4l-5.8-7.59-6.64 7.59H.47l8.6-9.83L0 1.15h7.6l5.24 6.93zm-1.29 19.5h2.04L6.49 3.24H4.3z"/></svg><span>@KatTitterton</span></a></li>
+        <li>ORCID <a href="https://orcid.org/0009-0008-3579-1793">0009-0008-3579-1793</a></li>
+      </ul>
     </div>
-    <p class="summary">Neuroscientist-engineer at the seam of imaging, signal extraction and machine learning. Follows a hard question until the tool that answers it works, then makes the case in the room with numbers and a story. Eight years across academia (MGH, MIT), big pharma (AbbVie) and ML-first biotech (Insitro, Axiom Bio) have given a wide view of how science gets done, and of the biases that shape it. Self-taught coder: took graduate night courses in Python (2019) and computer vision (2020, during COVID), then spent nights and weekends automating data analysis in Python and R, before AI could write code. Has kept automating the bench since, from liquid-handler scheduling and R dose-response pipelines to PyTorch segmentation, and now builds with agentic coding. Prefers the work to the credit: co-author of eight peer-reviewed papers, including two in <i>Nature Communications</i>, contributing the assays, imaging and analysis behind them.</p>
   </header>
 
   <h2>Selected contributions <span class="key">[n] = publication number below</span></h2>
@@ -133,23 +152,23 @@
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b><a href="https://www.axi.om/research">Axiom Bio</a></b><span class="dot">·</span><span class="title">Founding Member of the Technical Staff</span></div>
+      <div class="role"><b><a href="https://www.axi.om/research">Axiom Bio</a></b><span class="dot"> </span><span class="title">Founding Member of the Technical Staff</span></div>
       <div class="meta"><span class="loc">San Francisco, CA</span><span class="dt">2023–2026</span></div>
     </div>
     <ul class="b">
-      <li>Invented two image-based bioactivity-detection methods that flag small-molecule effects at ~10× lower concentrations than conventional toxicity assays (LDH, MT-Glo, cell count); owned their development and testing.</li>
+      <li>Invented two image-based bioactivity-detection methods that flag small-molecule effects at ~10× lower concentrations than conventional toxicity assays (LDH, MT-Glo, cell count); owned development and testing.</li>
       <li>Led image labeling specs, QC and PyTorch U-Net segmentation of 100,000+ compound Cell Painting images; models in production for more than a year after benchmarking Segment Anything (SAM).</li>
       <li>Oversaw assay development, QC and data generation for two of the world's largest Cell Painting datasets, built as AI-ready training data; led feature engineering on them.</li>
       <li>Partnered on an interpretable in silico DILI clinical-risk model reaching 0.92 AUC.</li>
       <li>Shaped scientific product direction as a founding technical hire.</li>
     </ul>
-    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep">·</span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span></p>
+    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span></p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Insitro</b><span class="dot">·</span><span class="title">Associate Scientist III, Arrayed Screening</span></div>
-      <div class="meta"><span class="loc">South San Francisco, CA</span><span class="dt">2022–2023</span></div>
+      <div class="role"><b>Insitro</b><span class="dot"> </span><span class="title">Associate Scientist III, Arrayed Screening</span></div>
+      <div class="meta"><span class="loc">South SF, CA</span><span class="dt">2022–2023</span></div>
     </div>
     <ul class="b">
       <li>Onboarded tuberous sclerosis complex and ALS small-molecule screens, from assay development to automated 384-well feeding, staining and imaging (BioTek, HighRes Biosolutions).</li>
@@ -160,19 +179,19 @@
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>MIT</b><span class="dot">·</span><span class="title">Technical Associate II, Synthetic Neurobiology Group (Boyden Lab)</span></div>
+      <div class="role"><b>MIT</b><span class="dot"> </span><span class="title">Technical Associate II, Synthetic Neurobiology Group</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2021–2022</span></div>
     </div>
     <ul class="b">
       <li>Imaged 30+ proteins at nanoscale by optimizing multiplexed expansion revealing (mExR) for 7+ rounds of immunostaining on 16× expanded brain tissue.</li>
-      <li>Built the ImageJ/Fiji and MATLAB image-analysis pipelines behind the published method.</li>
+      <li>Built the ImageJ/Fiji and MATLAB image-analysis pipelines behind the published method, in the Boyden Lab.</li>
     </ul>
     <p class="pubs">Nat Commun 2024 <span class="ref"><a href="#pub6">[6]</a></span></p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>AbbVie</b><span class="dot">·</span><span class="title">Associate Scientist II, Foundational Neuroscience Center</span></div>
+      <div class="role"><b>AbbVie</b><span class="dot"> </span><span class="title">Associate Scientist II, Foundational Neuroscience Center</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2018–2021</span></div>
     </div>
     <ul class="b">
@@ -180,12 +199,12 @@
       <li>Screened anti-tau antibodies by high-content analysis in primary neurons (SBI2 2019).</li>
       <li>Designed microfluidic neuron cultures that model tau spread between cells, for testing propagation inhibitors (SfN 2021).</li>
     </ul>
-    <p class="pubs">Mol Neurodegener Adv 2026 <span class="ref"><a href="#pub1">[1]</a></span><span class="sep">·</span>iScience 2026 <span class="ref"><a href="#pub2">[2]</a></span><span class="sep">·</span>J Biol Chem 2025 <span class="ref"><a href="#pub5">[5]</a></span><span class="sep">·</span>iScience 2022 <span class="ref"><a href="#pub7">[7]</a></span></p>
+    <p class="pubs">Mol Neurodegener Adv 2026 <span class="ref"><a href="#pub1">[1]</a></span><span class="sep"> </span>iScience 2026 <span class="ref"><a href="#pub2">[2]</a></span><span class="sep"> </span>J Biol Chem 2025 <span class="ref"><a href="#pub5">[5]</a></span><span class="sep"> </span>iScience 2022 <span class="ref"><a href="#pub7">[7]</a></span></p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Massachusetts General Hospital</b><span class="dot">·</span><span class="title">Research Technician I</span></div>
+      <div class="role"><b>Massachusetts General Hospital</b><span class="dot"> </span><span class="title">Research Technician I</span></div>
       <div class="meta"><span class="loc">Boston, MA</span><span class="dt">2017–2018</span></div>
     </div>
     <ul class="b">
@@ -197,32 +216,32 @@
   <h2>Education</h2>
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Colgate University</b><span class="dot">·</span><span class="title">B.A. Cellular Neuroscience, <i>cum laude</i></span></div>
+      <div class="role"><b>Colgate University</b><span class="dot"> </span><span class="title">B.A. Cellular Neuroscience, <i>cum laude</i></span></div>
       <div class="meta"><span class="loc">Hamilton, NY</span><span class="dt">2013–2017</span></div>
     </div>
     <p class="desc">Minor in Mathematical Systems Biology. Co-captain, Division I Track &amp; Field.</p>
   </div>
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Harvard Extension School</b><span class="dot">·</span><span class="title">Graduate coursework while working full-time</span></div>
+      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Graduate coursework</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2019–2020</span></div>
     </div>
     <ul class="b">
-      <li>Introduction to Programming in Python with Applications in Life Science (CSCI E-7, 2019), a CS50-style course for life scientists, on AbbVie tuition support.</li>
+      <li>Introduction to Programming in Python with Applications in Life Science (CSCI E-7, 2019), a CS50-style course for life scientists, taken while working full-time on AbbVie tuition support.</li>
       <li>Image Processing and Computer Vision (CSCI S-25, 2020), taught in Python: color representation, segmentation, feature extraction and early deep models including U-Nets.</li>
     </ul>
   </div>
 
-  <h2>Peer-reviewed publications <span class="key">8 papers · newest first</span></h2>
+  <h2>Peer-reviewed publications <span class="key">8 papers, newest first</span></h2>
   <ol class="cites">
     <li id="pub1">Yanamandra K, Romanul N, Patel H, Sanders H, Chang R, Darcy A, Brown N, Kane C, Wu HY, Jagtap K, Chancellor S, Morozova O, Xi M, Hogan C, <b>Titterton K</b>, Wu JW, Manos J, Karran E, Dellovade T, Langlois X. Conformation-specific anti-pathological tau antibody raised against AD brain-derived seed-competent tau reduces tau pathology in transgenic mice. <i>Mol Neurodegener Adv</i>. 2026;2(1):43. <a href="https://doi.org/10.1186/s44477-026-00049-6">doi:10.1186/s44477-026-00049-6</a> <span class="inst">AbbVie</span></li>
-    <li id="pub2">Sebastian RM, Kupp R, Nanavati D, Parfentev I, Krzystek TJ, Romanul N, Yanamandra K, Preiss CN, Manos JD, Wu HY, Volkova A, Crescenti S, <b>Titterton K</b>, Welker AM, Townsend M, Karran E, Langlois X, Wu JW. SynCAR platform for capturing neuronal synaptic proteopathic seeds. <i>iScience</i>. 2026;29(7):116362. <a href="https://doi.org/10.1016/j.isci.2026.116362">doi:10.1016/j.isci.2026.116362</a> <span class="ids">PMID 42325569 · PMC13276770</span> <span class="inst">AbbVie</span></li>
+    <li id="pub2">Sebastian RM, Kupp R, Nanavati D, Parfentev I, Krzystek TJ, Romanul N, Yanamandra K, Preiss CN, Manos JD, Wu HY, Volkova A, Crescenti S, <b>Titterton K</b>, Welker AM, Townsend M, Karran E, Langlois X, Wu JW. SynCAR platform for capturing neuronal synaptic proteopathic seeds. <i>iScience</i>. 2026;29(7):116362. <a href="https://doi.org/10.1016/j.isci.2026.116362">doi:10.1016/j.isci.2026.116362</a> <span class="ids">PMID 42325569, PMC13276770</span> <span class="inst">AbbVie</span></li>
     <li id="pub3">Ewald JD, <b>Titterton KL</b>, Bäuerle A, Beatson A, Boiko DA, Cabrera ÁA, Cheah J, Cimini BA, Gorissen BL, Harrill J, Jones TR, Karczewski KJ, Crute CE, Rouquie D, Seal S, Weisbart E, White B, Carpenter AE, Singh S. Cell Painting for cytotoxicity and mode-of-action analysis in primary human hepatocytes. <i>Cell Syst</i>. 2026;17(5):101566. <a href="https://doi.org/10.1016/j.cels.2026.101566">doi:10.1016/j.cels.2026.101566</a> <span class="ids">PMID 41903531</span> <span class="inst">Axiom Bio</span></li>
-    <li id="pub4">Seal S, Dee W, Shah A, Cerisier N, Zhang A, Miglietta E, <b>Titterton K</b>, Cabrera ÁA, Boiko D, Beatson A, Slabaugh G, Taboureau O, Carreras Puigvert J, Singh S, Spjuth O, Bender A, Carpenter AE. Counting cells can accurately predict small-molecule bioactivity benchmarks. <i>Nat Commun</i>. 2026;17(1). <a href="https://doi.org/10.1038/s41467-026-68725-5">doi:10.1038/s41467-026-68725-5</a> <span class="ids">PMID 41651839 · PMC12988037</span> <span class="inst">Axiom Bio</span> <a class="feat" href="https://www.axi.om/research">featured on axi.om</a></li>
-    <li id="pub5">Wu JW, <b>Titterton K</b>, Sebastian R, Romanul N, Yanamandra K, Mastis B, Chang R, Khasnavis S, Kwon T, Chai Y, Manos JD, Preiss CN, Hu M, Welker AM, Liao F, Dellovade T, Karran E, Langlois X. Development of a robust, physiologically relevant neuronal tau aggregation assay for tau-related drug discovery. <i>J Biol Chem</i>. 2025;301(12):110853. <a href="https://doi.org/10.1016/j.jbc.2025.110853">doi:10.1016/j.jbc.2025.110853</a> <span class="ids">PMID 41135680 · PMC12670552</span> <span class="inst">AbbVie</span></li>
-    <li id="pub6">Kang J, Schroeder ME, Lee Y, Kapoor C, Yu E, Tarr TB, <b>Titterton K</b>, Zeng M, Park D, Niederst E, Wei D, Feng G, Boyden ES. Multiplexed expansion revealing for imaging multiprotein nanostructures in healthy and diseased brain. <i>Nat Commun</i>. 2024;15(1):9722. <a href="https://doi.org/10.1038/s41467-024-53729-w">doi:10.1038/s41467-024-53729-w</a> <span class="ids">PMID 39521775 · PMC11550395</span> <span class="inst">MIT</span></li>
-    <li id="pub7">Manos JD, Preiss CN, Venkat N, Tamm J, Reinhardt P, Kwon T, Wu J, Winter AD, Jahn TR, Yanamandra K, <b>Titterton K</b>, Karran E, Langlois X. Uncovering specificity of endogenous TAU aggregation in a human iPSC-neuron TAU seeding model. <i>iScience</i>. 2022;25(1):103658. <a href="https://doi.org/10.1016/j.isci.2021.103658">doi:10.1016/j.isci.2021.103658</a> <span class="ids">PMID 35072001 · PMC8761709</span> <span class="inst">AbbVie</span></li>
-    <li id="pub8">Wu B, Jayakar SS, Zhou X, <b>Titterton K</b>, Chiara DC, Szabo AL, Savechenkov PY, Kent DE, Cohen JB, Forman SA, Miller KW, Bruzik KS. Inhibitable photolabeling by neurosteroid diazirine analog in the β3-subunit of human heteropentameric type A GABA receptors. <i>Eur J Med Chem</i>. 2019;162:810-824. <a href="https://doi.org/10.1016/j.ejmech.2018.11.019">doi:10.1016/j.ejmech.2018.11.019</a> <span class="ids">PMID 30544077 · PMC6912599</span> <span class="inst">MGH</span></li>
+    <li id="pub4">Seal S, Dee W, Shah A, Cerisier N, Zhang A, Miglietta E, <b>Titterton K</b>, Cabrera ÁA, Boiko D, Beatson A, Slabaugh G, Taboureau O, Carreras Puigvert J, Singh S, Spjuth O, Bender A, Carpenter AE. Counting cells can accurately predict small-molecule bioactivity benchmarks. <i>Nat Commun</i>. 2026;17(1). <a href="https://doi.org/10.1038/s41467-026-68725-5">doi:10.1038/s41467-026-68725-5</a> <span class="ids">PMID 41651839, PMC12988037</span> <span class="inst">Axiom Bio</span> <a class="feat" href="https://www.axi.om/research">featured on axi.om</a></li>
+    <li id="pub5">Wu JW, <b>Titterton K</b>, Sebastian R, Romanul N, Yanamandra K, Mastis B, Chang R, Khasnavis S, Kwon T, Chai Y, Manos JD, Preiss CN, Hu M, Welker AM, Liao F, Dellovade T, Karran E, Langlois X. Development of a robust, physiologically relevant neuronal tau aggregation assay for tau-related drug discovery. <i>J Biol Chem</i>. 2025;301(12):110853. <a href="https://doi.org/10.1016/j.jbc.2025.110853">doi:10.1016/j.jbc.2025.110853</a> <span class="ids">PMID 41135680, PMC12670552</span> <span class="inst">AbbVie</span></li>
+    <li id="pub6">Kang J, Schroeder ME, Lee Y, Kapoor C, Yu E, Tarr TB, <b>Titterton K</b>, Zeng M, Park D, Niederst E, Wei D, Feng G, Boyden ES. Multiplexed expansion revealing for imaging multiprotein nanostructures in healthy and diseased brain. <i>Nat Commun</i>. 2024;15(1):9722. <a href="https://doi.org/10.1038/s41467-024-53729-w">doi:10.1038/s41467-024-53729-w</a> <span class="ids">PMID 39521775, PMC11550395</span> <span class="inst">MIT</span></li>
+    <li id="pub7">Manos JD, Preiss CN, Venkat N, Tamm J, Reinhardt P, Kwon T, Wu J, Winter AD, Jahn TR, Yanamandra K, <b>Titterton K</b>, Karran E, Langlois X. Uncovering specificity of endogenous TAU aggregation in a human iPSC-neuron TAU seeding model. <i>iScience</i>. 2022;25(1):103658. <a href="https://doi.org/10.1016/j.isci.2021.103658">doi:10.1016/j.isci.2021.103658</a> <span class="ids">PMID 35072001, PMC8761709</span> <span class="inst">AbbVie</span></li>
+    <li id="pub8">Wu B, Jayakar SS, Zhou X, <b>Titterton K</b>, Chiara DC, Szabo AL, Savechenkov PY, Kent DE, Cohen JB, Forman SA, Miller KW, Bruzik KS. Inhibitable photolabeling by neurosteroid diazirine analog in the β3-subunit of human heteropentameric type A GABA receptors. <i>Eur J Med Chem</i>. 2019;162:810-824. <a href="https://doi.org/10.1016/j.ejmech.2018.11.019">doi:10.1016/j.ejmech.2018.11.019</a> <span class="ids">PMID 30544077, PMC6912599</span> <span class="inst">MGH</span></li>
   </ol>
 
   <h2>Talks, conference presentations &amp; posters</h2>
@@ -239,42 +258,42 @@
     <li>PDE2 regulation of β-arrestin signaling. Systems Biology Center New York (SBCNY) Summer Trainee Poster Symposium, Icahn School of Medicine at Mount Sinai, 2015.</li>
   </ul>
 
-  <h2>Independent work <span class="key">2026–present · questions explored with AI agents</span></h2>
+  <h2>Independent work <span class="key">questions explored with AI agents</span></h2>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot">·</span><span class="title">Designing my ideal AI × bio startup</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot"> </span><span class="title">Designing my ideal AI × bio startup</span></div><div class="meta"><span class="dt">2026</span></div></div>
     <p class="desc">What would the right startup be for my own strengths, work and the state of the field? A venture pitch built on one question, "do my cells look normal?" Every result is a difference from a control, and nobody checks the control against other labs. On 93,228 public control wells from 1,872 plates in 11 labs, a classifier names the lab from controls alone at 99.9% balanced accuracy, and a lab's drift predicts disagreement on known answers. <a href="https://github.com/kat-titter/datum-line">code and evidence</a></p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot">·</span><span class="title">Public overdose tracker, kept current by a weekly Claude Code agent</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public overdose tracker kept current by a weekly agent</span></div><div class="meta"><span class="dt">2026</span></div></div>
     <p class="desc">Official 12-month overdose death counts (CDC, state and county health departments, the SF medical examiner) and primary-sourced incident reports on one map and timeline. A scheduled Claude Code agent pulls new data, finds new reports, validates them and publishes every Monday. <a href="https://github.com/kat-titter/overdose-watch">code and data</a></p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot">·</span><span class="title">AI slop as vanitas</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot"> </span><span class="title">AI slop as vanitas</span></div><div class="meta"><span class="dt">2026</span></div></div>
     <p class="desc">What does a model drinking its own output look like? An 8.5-minute 4K loop melting eight vanitas portraits, built with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop; the key finding was that going slow, not more diffusion, made it beautiful. Plus <a href="https://kat-titter.github.io/vanitas_veritas_verse/">an interactive web piece</a>. <a href="https://github.com/kat-titter/vanitas-veritas">pipeline and docs</a></p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b>treble</b><span class="dot">·</span><span class="title">A one-hour DJ set coded with AI</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b>treble</b><span class="dot"> </span><span class="title">A one-hour DJ set coded with AI</span></div><div class="meta"><span class="dt">2026</span></div></div>
     <p class="desc">Can taste be taught to a process? A one-hour set built from beat-aligned transitions and a listening studio, refined by ear over 44 versions; building it into a general tool. Available on request.</p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot">·</span><span class="title">Can an agent keep what it learns? Corrections become reusable Claude Code skills</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot"> </span><span class="title">Can an agent keep what it learns? Corrections become skills</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
 
   <h2>Earlier projects &amp; creative work</h2>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://www.macrofluidic.me/gallery">Bare Metal</a></b><span class="dot">·</span><span class="title">Solo generative-art exhibit, Human Tech Week SF; <a href="https://www.macrofluidic.me/blog">post-hoc analysis</a></span></div><div class="meta"><span class="dt">2025</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://www.macrofluidic.me/gallery">Bare Metal</a></b><span class="dot"> </span><span class="title">Solo generative-art exhibit, Human Tech Week SF; <a href="https://www.macrofluidic.me/blog">post-hoc analysis</a></span></div><div class="meta"><span class="dt">2025</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b>Vivarium 2.0</b><span class="dot">·</span><span class="title">Automated poison-dart-frog habitat: misting control, motion-triggered video</span></div><div class="meta"><span class="dt">2024</span></div></div>
+    <div class="entry-head"><div class="role"><b>Vivarium 2.0</b><span class="dot"> </span><span class="title">Automated poison-dart-frog habitat with misting and live video</span></div><div class="meta"><span class="dt">2024</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://docs.google.com/presentation/d/11FDIWB3ggNYkUqzwoIB4Nc3ZkTIs9wbMEJBKeHplSGE/edit">OpenTronsformers</a></b><span class="dot">·</span><span class="title">LLM copilot for the OT-2 lab robot; 2nd place, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://docs.google.com/presentation/d/11FDIWB3ggNYkUqzwoIB4Nc3ZkTIs9wbMEJBKeHplSGE/edit">OpenTronsformers</a></b><span class="dot"> </span><span class="title">LLM copilot for the OT-2 lab robot; 2nd place, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
   </div>
 
   <h2>Honors &amp; awards</h2>
-  <div class="entry"><div class="entry-head"><div class="role"><b>2nd place, BioHack NYC</b><span class="dot">·</span><span class="title">OpenTronsformers, LLM-driven lab-robot automation</span></div><div class="meta"><span class="dt">2023</span></div></div></div>
-  <div class="entry"><div class="entry-head"><div class="role"><b>Dorothy-Waltham Award for Athletic Leadership</b><span class="dot">·</span><span class="title">Colgate University</span></div><div class="meta"><span class="dt">2017</span></div></div></div>
-  <div class="entry"><div class="entry-head"><div class="role"><b><i>cum laude</i></b><span class="dot">·</span><span class="title">Colgate University</span></div><div class="meta"><span class="dt">2017</span></div></div></div>
+  <div class="entry"><div class="entry-head"><div class="role"><b>2nd place, BioHack NYC</b><span class="dot"> </span><span class="title">OpenTronsformers, LLM-driven lab-robot automation</span></div><div class="meta"><span class="dt">2023</span></div></div></div>
+  <div class="entry"><div class="entry-head"><div class="role"><b>Dorothy-Waltham Award for Athletic Leadership</b><span class="dot"> </span><span class="title">Colgate University</span></div><div class="meta"><span class="dt">2017</span></div></div></div>
+  <div class="entry"><div class="entry-head"><div class="role"><b><i>cum laude</i></b><span class="dot"> </span><span class="title">Colgate University</span></div><div class="meta"><span class="dt">2017</span></div></div></div>
 
 
   <h2>Skills</h2>
@@ -286,8 +305,8 @@
   </div>
 
   <h2>Memberships &amp; certifications</h2>
-  <p class="desc"><b>Memberships:</b> Society of Toxicology · Society for Neuroscience · Society of Biomolecular Imaging and Informatics</p>
-  <p class="desc"><b>Certifications:</b> freediving, FII Level 1 (2019) and Molchanov Level 2 (2025) · SII Shark Ecology Specialty (2020)</p>
+  <p class="desc"><b>Memberships:</b> Society of Toxicology, Society for Neuroscience, Society of Biomolecular Imaging and Informatics</p>
+  <p class="desc"><b>Certifications:</b> freediving, FII Level 1 (2019) and Molchanov Level 2 (2025); SII Shark Ecology Specialty (2020)</p>
 
 </div>
 

@@ -13,50 +13,55 @@
   html,body{margin:0;padding:0;}
   body{ font-family:"Helvetica Neue",Helvetica,Arial,sans-serif; color:var(--ink); font-size:10pt; line-height:1.3; -webkit-font-smoothing:antialiased; background:#fff; }
   .mono,.pos,.contact,h2,.meta,.pubs,.foot,.inst,.ids,.pagetag{ font-family:"IBM Plex Mono","SF Mono",Menlo,Consolas,monospace; }
-  .page{ width:8.5in; height:11in; padding:0.5in 0.6in 0.45in; margin:0 auto; overflow:hidden; position:relative; }
+  .page{ width:8.5in; height:11in; padding:0.6in 0.7in 0.5in; margin:0 auto; overflow:hidden; position:relative; }
   .page.first{ page-break-after:always; break-after:page; }
   @media screen{ body{background:#e9e9e9;} .page{background:#fff; margin:12px auto; box-shadow:0 1px 6px rgba(0,0,0,.15);} }
 
   /* Header */
-  header{ border-bottom:1px solid var(--rule); padding-bottom:5pt; }
+  header{ padding-bottom:0; }
   h1{ font-size:22pt; font-weight:700; letter-spacing:-0.4pt; margin:0 0 2pt; line-height:1.1; }
   h1 .kat{ font-family:"IBM Plex Mono","SF Mono",Menlo,monospace; font-weight:500; color:var(--muted); letter-spacing:-0.8pt; margin-right:1px; }
-  .pos{ font-size:10pt; color:var(--ink); margin:0 0 3pt; }
-  .contact{ font-size:9pt; color:var(--muted); line-height:1.4; }
-  .contact span{ margin:0 5pt; }
+  .pos{ font-size:10pt; color:var(--ink); margin:0 0 7pt; }
+  .contact{ font-size:9pt; color:var(--muted); line-height:1.45; }
+  .contact .gap{ display:inline-block; width:16pt; }
+  .hgrid{ display:grid; grid-template-columns:minmax(0,1fr) auto; gap:26pt; align-items:start; }
+  ul.contact{ list-style:none; margin:0; padding:0; white-space:nowrap; }
+  ul.contact a{ display:inline-flex; align-items:center; gap:5pt; }
+  .ico{ width:9pt; height:9pt; fill:currentColor; flex:none; }
   .contact a{ color:inherit; text-decoration:none; }
-  .summary{ margin:5pt 0 0; color:var(--body); }
+  .summary{ margin:0; color:var(--body); max-width:80ch; }
+  .summary + .summary{ margin-top:5pt; }
 
   /* Sections */
-  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:8pt 0 4pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
+  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:12pt 0 5pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
   h2 .key{ font-size:9pt; text-transform:none; letter-spacing:0; color:var(--muted); font-weight:400; }
 
   /* Entries */
-  .entry{ margin-bottom:4pt; }
+  .entry{ margin-bottom:6pt; }
   .entry-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10pt; }
   .role{ font-size:10.5pt; }
   .role b{ font-weight:700; }
   .role .title{ color:var(--ink); }
-  .role .dot{ color:var(--muted); margin:0 4pt; }
+  .role .dot{ display:inline-block; width:10pt; }
   .meta{ font-size:9pt; color:var(--muted); white-space:nowrap; }
-  .meta .loc{ margin-right:10pt; }
+  .meta .loc{ display:inline-block; width:95pt; text-align:left; }
   .meta .dt{ display:inline-block; width:80pt; text-align:right; color:var(--ink); }
   ul.b{ margin:2pt 0 0; padding:0 0 0 12pt; }
-  ul.b li{ color:var(--body); margin:0 0 1pt; padding-left:1pt; }
+  ul.b li{ color:var(--body); margin:0 0 1.5pt; padding-left:1pt; }
   ul.b li::marker{ color:var(--muted); }
   .pubs{ margin:1pt 0 0 13pt; font-size:9pt; color:var(--muted); }
-  .pubs .sep{ margin:0 4pt; }
+  .pubs .sep{ display:inline-block; width:12pt; }
   .desc{ margin:1pt 0 0; color:var(--body); }
 
   /* Skills: single column rows */
-  .rows .entry{ margin-bottom:2pt; }
+  .rows .entry{ margin-bottom:2.5pt; }
   .skills p{ margin:0 0 1pt; color:var(--body); }
   .skills b{ font-weight:700; color:var(--ink); }
 
   /* Page 2 */
   .p2 header{ display:flex; justify-content:space-between; align-items:baseline; }
   .p2 h1{ font-size:16pt; }
-  .p2 h1 .sub{ font-weight:400; color:var(--muted); font-size:12pt; }
+  .p2 h1 .sub{ font-weight:400; color:var(--muted); font-size:12pt; margin-left:8pt; }
   .pagetag{ font-size:9pt; color:var(--muted); white-space:nowrap; }
   ol.cites{ margin:0; padding:0 0 0 26pt; }
   ol.cites li{ color:var(--body); margin-bottom:5pt; padding-left:2pt; }
@@ -83,9 +88,12 @@
     .entry-head, h2, .p2 header{ flex-wrap:wrap; }
     .meta{ white-space:normal; }
     .meta .dt{ width:auto; margin-left:0; }
+    .hgrid{ grid-template-columns:1fr; gap:10pt; }
+    ul.contact{ white-space:normal; display:flex; flex-wrap:wrap; gap:2pt 14pt; }
+    .meta .loc{ width:auto; margin-right:10pt; }
     .foot{ position:static; margin-top:16px; }
   }
-  .foot{ position:absolute; left:0.6in; right:0.6in; bottom:0.3in; font-size:8.5pt; color:var(--muted); display:flex; justify-content:space-between; border-top:1px solid var(--rule); padding-top:3pt; }
+  .foot{ position:absolute; left:0.7in; right:0.7in; bottom:0.3in; font-size:8.5pt; color:var(--muted); display:flex; justify-content:space-between; border-top:1px solid var(--rule); padding-top:3pt; }
 </style>
 </head>
 <body>
@@ -96,33 +104,40 @@
 
   <header>
     <h1><span class="kat">Kat</span>herine Titterton</h1>
-    <div class="pos">Scientist-engineer and technical storyteller · neuroscience, imaging, AI</div>
-    <div class="contact">
-      San Francisco, CA<span>·</span><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a><span>·</span><a href="https://www.macrofluidic.me">macrofluidic.me</a><br>
-      <a href="https://github.com/kat-titter">github.com/kat-titter</a><span>·</span><a href="https://www.linkedin.com/in/katherine-titterton-70011699/">linkedin.com/in/katherine-titterton-70011699</a>
+    <div class="pos">Scientist-engineer and technical storyteller in neuroscience, imaging and AI</div>
+    <div class="hgrid">
+      <div>
+        <p class="summary">Neuroscientist-engineer at the seam of imaging, signal extraction and ML. Follows a hard question until the tool that answers it works, then makes the case with numbers and a story. Eight years across academia, pharma and ML-first biotech, with a wide view of science and its biases. Self-taught coder before AI could code; now builds with agentic coding. Prefers the work to the credit.</p>
+      </div>
+      <ul class="contact">
+        <li>San Francisco, CA</li>
+        <li><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a></li>
+        <li><a href="https://www.macrofluidic.me">macrofluidic.me</a></li>
+        <li><a href="https://github.com/kat-titter"><svg class="ico" viewBox="0 0 24 24" aria-label="GitHub" role="img"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg><span>kat-titter</span></a></li>
+        <li><a href="https://www.linkedin.com/in/katherine-titterton-70011699/"><svg class="ico" viewBox="0 0 24 24" aria-label="LinkedIn" role="img"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>Katherine Titterton</span></a></li>
+      </ul>
     </div>
-    <p class="summary">Neuroscientist-engineer at the seam of imaging, signal extraction and machine learning. Follows a hard question until the tool that answers it works, then makes the case with numbers and a story. Eight years across academia (MGH, MIT), big pharma (AbbVie) and ML-first biotech (Insitro, Axiom Bio), with a wide view of science and its biases. Self-taught coder from before AI could write code; now builds with agentic coding. Prefers the work to the credit.</p>
   </header>
 
   <h2>Experience <span class="key">[n] = publication number on page 2</span></h2>
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b><a href="https://www.axi.om/research">Axiom Bio</a></b><span class="dot">·</span><span class="title">Founding Member of the Technical Staff</span></div>
+      <div class="role"><b><a href="https://www.axi.om/research">Axiom Bio</a></b><span class="dot"> </span><span class="title">Founding Member of the Technical Staff</span></div>
       <div class="meta"><span class="loc">San Francisco, CA</span><span class="dt">2023–2026</span></div>
     </div>
     <ul class="b">
       <li>Invented two image-based bioactivity-detection methods ~10× more sensitive than conventional assays.</li>
-      <li>Led image labeling, QC and PyTorch U-Net segmentation of 100,000+ compound images, in production 1+ year.</li>
+      <li>Led labeling, QC and PyTorch U-Net segmentation of 100,000+ compound images; in production 1+ year.</li>
       <li>Oversaw assay development for two of the largest Cell Painting datasets, built as AI-ready training data.</li>
     </ul>
-    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep">·</span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span></p>
+    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span></p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Insitro</b><span class="dot">·</span><span class="title">Associate Scientist III, Arrayed Screening</span></div>
-      <div class="meta"><span class="loc">South San Francisco, CA</span><span class="dt">2022–2023</span></div>
+      <div class="role"><b>Insitro</b><span class="dot"> </span><span class="title">Associate Scientist III, Arrayed Screening</span></div>
+      <div class="meta"><span class="loc">South SF, CA</span><span class="dt">2022–2023</span></div>
     </div>
     <ul class="b">
       <li>Onboarded tuberous sclerosis and ALS screens, from assay development to automated 384-well imaging.</li>
@@ -133,11 +148,11 @@
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>MIT</b><span class="dot">·</span><span class="title">Technical Associate II, Synthetic Neurobiology Group</span></div>
+      <div class="role"><b>MIT</b><span class="dot"> </span><span class="title">Technical Associate II, Synthetic Neurobiology Group</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2021–2022</span></div>
     </div>
     <ul class="b">
-      <li>Imaged 30+ proteins at nanoscale by optimizing expansion revealing (mExR) for 7+ staining rounds on brain tissue.</li>
+      <li>Imaged 30+ proteins at nanoscale by optimizing expansion revealing (mExR) over 7+ staining rounds.</li>
       <li>Built the ImageJ/Fiji and MATLAB analysis pipelines behind the published method.</li>
     </ul>
     <p class="pubs">Nat Commun 2024 <span class="ref"><a href="#pub6">[6]</a></span></p>
@@ -145,19 +160,19 @@
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>AbbVie</b><span class="dot">·</span><span class="title">Associate Scientist II, Foundational Neuroscience Center</span></div>
+      <div class="role"><b>AbbVie</b><span class="dot"> </span><span class="title">Associate Scientist II, Foundational Neuroscience Center</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2018–2021</span></div>
     </div>
     <ul class="b">
       <li>Established tau-aggregation screens in primary and iPSC neurons, from assay development to R lead ranking.</li>
       <li>Designed microfluidic neuron cultures that model tau spread between cells, for testing propagation inhibitors.</li>
     </ul>
-    <p class="pubs">Mol Neurodegener Adv 2026 <span class="ref"><a href="#pub1">[1]</a></span><span class="sep">·</span>iScience 2026 <span class="ref"><a href="#pub2">[2]</a></span><span class="sep">·</span>J Biol Chem 2025 <span class="ref"><a href="#pub5">[5]</a></span><span class="sep">·</span>iScience 2022 <span class="ref"><a href="#pub7">[7]</a></span></p>
+    <p class="pubs">Mol Neurodegener Adv 2026 <span class="ref"><a href="#pub1">[1]</a></span><span class="sep"> </span>iScience 2026 <span class="ref"><a href="#pub2">[2]</a></span><span class="sep"> </span>J Biol Chem 2025 <span class="ref"><a href="#pub5">[5]</a></span><span class="sep"> </span>iScience 2022 <span class="ref"><a href="#pub7">[7]</a></span></p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Massachusetts General Hospital</b><span class="dot">·</span><span class="title">Research Technician I</span></div>
+      <div class="role"><b>Massachusetts General Hospital</b><span class="dot"> </span><span class="title">Research Technician I</span></div>
       <div class="meta"><span class="loc">Boston, MA</span><span class="dt">2017–2018</span></div>
     </div>
     <ul class="b">
@@ -166,47 +181,45 @@
     <p class="pubs">Eur J Med Chem 2019 <span class="ref"><a href="#pub8">[8]</a></span></p>
   </div>
 
-  <h2>Independent work <span class="key">2026–present · questions explored with AI agents</span></h2>
+  <h2>Independent work <span class="key">questions explored with AI agents</span></h2>
   <div class="rows">
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot">·</span><span class="title">Designing my ideal AI × bio startup: controls alone name the lab, 99.9%</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot"> </span><span class="title">Designing my ideal AI × bio startup: controls alone name the lab, 99.9%</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot">·</span><span class="title">Public overdose tracker a weekly Claude Code agent keeps current</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public overdose tracker a weekly Claude Code agent keeps current</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot">·</span><span class="title">AI slop as vanitas: 4K open-source diffusion loop, interactive piece</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot"> </span><span class="title">AI slop as vanitas: 4K open-source diffusion loop, interactive piece</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b>treble</b><span class="dot">·</span><span class="title">Coded a one-hour DJ set with AI; building a general tool. On request</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot"> </span><span class="title">Can an agent keep what it learns? Corrections become skills</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot">·</span><span class="title">Can an agent keep what it learns? Corrections become skills</span></div><div class="meta"><span class="dt">2026</span></div></div>
-  </div>
-  <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://docs.google.com/presentation/d/11FDIWB3ggNYkUqzwoIB4Nc3ZkTIs9wbMEJBKeHplSGE/edit">OpenTronsformers</a></b><span class="dot">·</span><span class="title">LLM copilot for the OT-2 lab robot; 2nd place, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
+    <div class="entry-head"><div class="role"><b><a href="https://docs.google.com/presentation/d/11FDIWB3ggNYkUqzwoIB4Nc3ZkTIs9wbMEJBKeHplSGE/edit">OpenTronsformers</a></b><span class="dot"> </span><span class="title">LLM copilot for the OT-2 lab robot; 2nd place, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
   </div>
   </div>
 
   <h2>Education</h2>
+  <div class="rows">
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Colgate University</b><span class="dot">·</span><span class="title">B.A. Cellular Neuroscience, minor Mathematical Systems Biology</span></div>
+      <div class="role"><b>Colgate University</b><span class="dot"> </span><span class="title">B.A. Cellular Neuroscience, minor Mathematical Systems Biology</span></div>
       <div class="meta"><span class="dt">2013–2017</span></div>
     </div>
   </div>
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Harvard Extension School</b><span class="dot">·</span><span class="title">Graduate coursework in Python and computer vision</span></div>
+      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Graduate coursework in Python and computer vision</span></div>
       <div class="meta"><span class="dt">2019–2020</span></div>
     </div>
+  </div>
   </div>
 
   <h2>Skills</h2>
   <div class="skills">
     <p><b>ML &amp; data:</b> PyTorch, U-Net segmentation, feature engineering, Python, R, agentic coding (Claude Code)</p>
-    <p><b>Imaging &amp; signal:</b> confocal, high-content, expansion and label-free microscopy, voltage clamp</p>
-    <p><b>Lab &amp; automation:</b> iPSC and primary neurons, assay development, HT screening, microfluidics, liquid handlers</p>
+    <p><b>Lab &amp; imaging:</b> confocal, high-content and expansion microscopy, voltage clamp, iPSC neurons, HT screening</p>
     <p><b>Story &amp; design:</b> data visualization, figure and pitch-deck design, generative art (Midjourney, diffusion)</p>
   </div>
 
@@ -216,12 +229,12 @@
 <div class="page p2">
 
   <header>
-    <h1><span class="kat">Kat</span>herine Titterton <span class="sub">· Publications</span></h1>
-    <div class="pagetag">resume page 2 · updated Oct 2026</div>
+    <h1><span class="kat">Kat</span>herine Titterton <span class="sub">Publications</span></h1>
+    <div class="pagetag">updated Oct 2026</div>
   </header>
-  <div class="contact" style="margin-top:4pt">ORCID <a href="https://orcid.org/0009-0008-3579-1793">0009-0008-3579-1793</a><span>·</span><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a><span>·</span>full author lists in CV</div>
+  <div class="contact" style="margin-top:4pt">ORCID <a href="https://orcid.org/0009-0008-3579-1793">0009-0008-3579-1793</a><span class="gap"></span><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a><span class="gap"></span>full author lists in CV</div>
 
-  <h2>Peer-reviewed publications <span class="key">8 papers · newest first</span></h2>
+  <h2>Peer-reviewed publications <span class="key">8 papers, newest first</span></h2>
   <ol class="cites">
     <li id="pub1">Yanamandra K, …, <b>Titterton K</b>, …, Langlois X. Conformation-specific anti-pathological tau antibody raised against AD brain-derived seed-competent tau reduces tau pathology in transgenic mice. <i>Mol Neurodegener Adv</i>. 2026;2(1):43. <a href="https://doi.org/10.1186/s44477-026-00049-6">doi:10.1186/s44477-026-00049-6</a> <span class="inst">AbbVie</span></li>
     <li id="pub2">Sebastian RM, …, <b>Titterton K</b>, …, Wu JW. SynCAR platform for capturing neuronal synaptic proteopathic seeds. <i>iScience</i>. 2026;29(7):116362. <a href="https://doi.org/10.1016/j.isci.2026.116362">doi:10.1016/j.isci.2026.116362</a> <span class="inst">AbbVie</span></li>
@@ -241,7 +254,7 @@
     <li><b>Titterton K</b>, et al. High content analysis of tau aggregation in primary neurons: screening anti-tau antibodies and modeling tauopathy progression in vitro. <i>SBI2 High Content Meeting</i>, Harvard Medical School, 2019. <a href="https://www.macrofluidic.me/9001442-2019-sbi2-poster">poster</a></li>
   </ol>
 
-  <div class="foot"><span>Katherine (Kat) Titterton · Publications</span><span>page 2 of 2</span></div>
+  <div class="foot"><span>Katherine (Kat) Titterton, publications</span><span>page 2 of 2</span></div>
 </div>
 
 </body>
