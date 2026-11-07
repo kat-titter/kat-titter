@@ -54,7 +54,7 @@
   .desc{ margin:1pt 0 0; color:var(--body); }
 
   /* Skills: single column rows */
-  .rows .entry{ margin-bottom:2.5pt; }
+  .rows .entry{ margin-bottom:2pt; }
   .skills p{ margin:0 0 1pt; color:var(--body); }
   .skills b{ font-weight:700; color:var(--ink); }
 
@@ -66,6 +66,7 @@
   ol.cites{ margin:0; padding:0 0 0 26pt; }
   ol.cites li{ color:var(--body); margin-bottom:5pt; padding-left:2pt; }
   ol.cites li::marker{ font-family:"IBM Plex Mono",Menlo,monospace; color:var(--muted); content:"[" counter(list-item) "] "; }
+  ol.cites li#pre1::marker{ content:"[P1] "; }
   ol.cites b{ color:var(--ink); }
   ol.cites i{ color:var(--body); }
   ol.cites a{ white-space:nowrap; color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px; }
@@ -131,7 +132,7 @@
       <li>Led labeling, QC and PyTorch U-Net segmentation of 100,000+ compound images; in production 1+ year.</li>
       <li>Oversaw assay development for two of the largest Cell Painting datasets, built as AI-ready training data.</li>
     </ul>
-    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span></p>
+    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span><span class="sep"> </span>bioRxiv 2026 <span class="ref"><a href="#pre1">[P1]</a></span></p>
   </div>
 
   <div class="entry">
@@ -152,8 +153,7 @@
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2021–2022</span></div>
     </div>
     <ul class="b">
-      <li>Imaged 30+ proteins at nanoscale by optimizing expansion revealing (mExR) over 7+ staining rounds.</li>
-      <li>Ran and optimized the lab's shared ImageJ/Fiji and MATLAB pipelines for the published method.</li>
+      <li>Optimized mExR to image 30+ proteins at nanoscale; ran the lab's Fiji and MATLAB pipelines.</li>
     </ul>
     <p class="pubs">Nat Commun 2024 <span class="ref"><a href="#pub6">[6]</a></span></p>
   </div>
@@ -185,6 +185,9 @@
   <div class="rows">
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot"> </span><span class="title">Designing my ideal AI × bio startup: controls alone name the lab, 99.9%</span></div><div class="meta"><span class="dt">2026</span></div></div>
+  </div>
+  <div class="entry">
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/every-line-is-a-loop/">Every line is a loop</a></b><span class="dot"> </span><span class="title">Does biology have a periodic table? Interactive essay</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public overdose tracker a weekly Claude Code agent keeps current</span></div><div class="meta"><span class="dt">2026</span></div></div>
@@ -230,7 +233,7 @@
 
   <header>
     <h1><span class="kat">Kat</span>herine Titterton <span class="sub">Publications</span></h1>
-    <div class="pagetag">updated Oct 2026</div>
+    <div class="pagetag">updated Nov 2026</div>
   </header>
   <div class="contact" style="margin-top:4pt">ORCID <a href="https://orcid.org/0009-0008-3579-1793">0009-0008-3579-1793</a><span class="gap"></span><a href="mailto:kattitterton@gmail.com">kattitterton@gmail.com</a><span class="gap"></span>full author lists in CV</div>
 
@@ -244,6 +247,11 @@
     <li id="pub6">Kang J, …, <b>Titterton K</b>, …, Boyden ES. Multiplexed expansion revealing for imaging multiprotein nanostructures in healthy and diseased brain. <i>Nat Commun</i>. 2024;15(1):9722. <a href="https://doi.org/10.1038/s41467-024-53729-w">doi:10.1038/s41467-024-53729-w</a> <span class="inst">MIT</span></li>
     <li id="pub7">Manos JD, …, <b>Titterton K</b>, …, Langlois X. Uncovering specificity of endogenous TAU aggregation in a human iPSC-neuron TAU seeding model. <i>iScience</i>. 2022;25(1):103658. <a href="https://doi.org/10.1016/j.isci.2021.103658">doi:10.1016/j.isci.2021.103658</a> <span class="inst">AbbVie</span></li>
     <li id="pub8">Wu B, …, <b>Titterton K</b>, …, Bruzik KS. Inhibitable photolabeling by neurosteroid diazirine analog in the β3-subunit of human heteropentameric type A GABA receptors. <i>Eur J Med Chem</i>. 2019;162:810-824. <a href="https://doi.org/10.1016/j.ejmech.2018.11.019">doi:10.1016/j.ejmech.2018.11.019</a> <span class="inst">MGH</span></li>
+  </ol>
+
+  <h2>Preprint</h2>
+  <ol class="cites">
+    <li id="pre1">Ollitrault G, …, <b>Titterton K</b>, Ewald J. Cell Painting and machine learning for mechanistic profiling of hepatotoxic botanicals and their constituents. <i>bioRxiv</i>. 2026. <a href="https://doi.org/10.64898/2026.10.05.756246">doi:10.64898/2026.10.05.756246</a> <span class="inst">Axiom Bio</span></li>
   </ol>
 
   <h2>Selected conference presentations &amp; posters</h2>

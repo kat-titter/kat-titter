@@ -67,6 +67,7 @@
   ol.cites li{ color:var(--body); margin-bottom:5pt; padding-left:2pt; }
   .doc ol.cites li{ margin-bottom:6pt; }
   ol.cites li::marker{ font-family:"IBM Plex Mono",Menlo,monospace; color:var(--muted); content:"[" counter(list-item) "] "; }
+  ol.cites li#pre1::marker{ content:"[P1] "; }
   ol.cites b{ color:var(--ink); }
   ol.cites i{ color:var(--body); }
   ol.cites a{ white-space:nowrap; color:var(--ink); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px; }
@@ -162,7 +163,7 @@
       <li>Partnered on an interpretable in silico DILI clinical-risk model reaching 0.92 AUC.</li>
       <li>Shaped scientific product direction as a founding technical hire.</li>
     </ul>
-    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span></p>
+    <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span><span class="sep"> </span>bioRxiv 2026 <span class="ref"><a href="#pre1">[P1]</a></span></p>
   </div>
 
   <div class="entry">
@@ -244,6 +245,11 @@
     <li id="pub8">Wu B, Jayakar SS, Zhou X, <b>Titterton K</b>, Chiara DC, Szabo AL, Savechenkov PY, Kent DE, Cohen JB, Forman SA, Miller KW, Bruzik KS. Inhibitable photolabeling by neurosteroid diazirine analog in the β3-subunit of human heteropentameric type A GABA receptors. <i>Eur J Med Chem</i>. 2019;162:810-824. <a href="https://doi.org/10.1016/j.ejmech.2018.11.019">doi:10.1016/j.ejmech.2018.11.019</a> <span class="ids">PMID 30544077, PMC6912599</span> <span class="inst">MGH</span></li>
   </ol>
 
+  <h2>Preprint</h2>
+  <ol class="cites">
+    <li id="pre1">Ollitrault G, Mitchell CA, Ferguson SS, Roe AL, White B, <b>Titterton K</b>, Ewald J. Cell Painting and machine learning for mechanistic profiling of hepatotoxic botanicals and their constituents. <i>bioRxiv</i>. 2026. <a href="https://doi.org/10.64898/2026.10.05.756246">doi:10.64898/2026.10.05.756246</a> <span class="inst">Axiom Bio</span></li>
+  </ol>
+
   <h2>Talks, conference presentations &amp; posters</h2>
   <ol class="cites">
     <li><b>Titterton K</b>. Using AI to Combine Exposure, Metabolism, and Liver Function to Model DILI in Modern Molecules. Recorded talk, Axiom Bio. <a href="https://www.youtube.com/watch?v=5bPLiewTbFw">video</a></li>
@@ -264,16 +270,20 @@
     <p class="desc">What would the right startup be for my own strengths, work and the state of the field? A venture pitch built on one question, "do my cells look normal?" Every result is a difference from a control, and nobody checks the control against other labs. On 93,228 public control wells from 1,872 plates in 11 labs, a classifier names the lab from controls alone at 99.9% balanced accuracy, and a lab's drift predicts disagreement on known answers. <a href="https://github.com/kat-titter/datum-line">code and evidence</a></p>
   </div>
   <div class="entry">
+    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/every-line-is-a-loop/">Every line is a loop</a></b><span class="dot"> </span><span class="title">A periodic table for biology</span></div><div class="meta"><span class="dt">2026</span></div></div>
+    <p class="desc">Does biology have a periodic table? Chemistry has one because electrons come in whole numbers; a cell's circuits have whole numbers too: loops, brakes and running totals. An interactive essay that reads 613 published BioModels and counts them into a table, where every switch has a self-feeding loop and every clock a brake. Live figures of the lac switch, a circadian clock and chemotaxis. <a href="https://github.com/kat-titter/every-line-is-a-loop">code and analysis</a></p>
+  </div>
+  <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public overdose tracker kept current by a weekly agent</span></div><div class="meta"><span class="dt">2026</span></div></div>
     <p class="desc">Official 12-month overdose death counts (CDC, state and county health departments, the SF medical examiner) and primary-sourced incident reports on one map and timeline. A scheduled Claude Code agent pulls new data, finds new reports, validates them and publishes every Monday. <a href="https://github.com/kat-titter/overdose-watch">code and data</a></p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot"> </span><span class="title">AI slop as vanitas</span></div><div class="meta"><span class="dt">2026</span></div></div>
-    <p class="desc">What does a model drinking its own output look like? An 8.5-minute 4K loop melting eight vanitas portraits, built with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop; the key finding was that going slow, not more diffusion, made it beautiful. Plus <a href="https://kat-titter.github.io/vanitas_veritas_verse/">an interactive web piece</a>. <a href="https://github.com/kat-titter/vanitas-veritas">pipeline and docs</a></p>
+    <p class="desc">What does a model drinking its own output look like? An 8.5-minute 4K loop melting eight vanitas portraits, built with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop; the key finding was that going slow, not more diffusion, made it beautiful. Plus <a href="https://kat-titter.github.io/veritas/">an interactive web piece</a>. <a href="https://github.com/kat-titter/vanitas-veritas">pipeline and docs</a></p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b>treble</b><span class="dot"> </span><span class="title">A one-hour DJ set coded with AI</span></div><div class="meta"><span class="dt">2026</span></div></div>
-    <p class="desc">Can taste be taught to a process? A one-hour set built from beat-aligned transitions and a listening studio, refined by ear over 44 versions; building it into a general tool. Available on request.</p>
+    <p class="desc">Can taste be taught to a process? A one-hour set built from beat-aligned transitions and a listening studio, refined by ear over 44 versions; building it into a general tool. Hear <a href="https://soundcloud.com/ex_gf/pilot">p[i]lot</a> (picked by hand), <a href="https://soundcloud.com/ex_gf/p-ai-lot">p[ai]lot</a> (full algorithm) and <a href="https://soundcloud.com/ex_gf/ex_gf_b-ur-ning">b[u][r]ning</a>. Code available on request.</p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot"> </span><span class="title">Can an agent keep what it learns? Corrections become skills</span></div><div class="meta"><span class="dt">2026</span></div></div>
