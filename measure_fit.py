@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
-"""Print-layout fit check: page heights (budget 1056px = 11in) and any wrapped one-line rows on page 1."""
+"""Print-layout fit check: page heights (budget 1056px = 11in) and any wrapped one-line rows on page 1 (li.two may take two lines)."""
 import subprocess,re,sys,os,tempfile
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 f=sys.argv[1] if len(sys.argv)>1 else 'resume.html'
 s=open(f,encoding='utf-8').read()
 s=re.sub(r'@media screen[^{]*\{(?:[^{}]*\{[^{}]*\})*[^{}]*\}','',s)        # drop screen-only rules
 s=s.replace('.page{ width:8.5in; height:11in;','.page{ width:8.5in; height:auto;').replace('overflow:hidden;','overflow:visible;')
-s=s.replace('</body>','<script>document.body.innerHTML="<pre id=m>"+[...document.querySelectorAll(".page")].map(p=>Math.round(p.getBoundingClientRect().height)).join(",")+"|"+[...document.querySelectorAll(".page.first ul.b li, .page.first .entry-head")].map(e=>Math.round(e.getBoundingClientRect().height)).join(",")+"</pre>";</script></body>')
+s=s.replace('</body>','<script>document.body.innerHTML="<pre id=m>"+[...document.querySelectorAll(".page")].map(p=>Math.round(p.getBoundingClientRect().height)).join(",")+"|"+[...document.querySelectorAll(".page.first ul.b li:not(.two), .page.first .entry-head, .page.first .skills p")].map(e=>Math.round(e.getBoundingClientRect().height)).join(",")+"</pre>";</script></body>')
 fd,tmp=tempfile.mkstemp(suffix='.html'); os.write(fd,s.encode()); os.close(fd)
 out=subprocess.run([CH,'--headless=new','--disable-gpu','--window-size=1400,3000','--dump-dom','file://'+tmp],capture_output=True,text=True).stdout
 os.remove(tmp)
