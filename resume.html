@@ -33,10 +33,10 @@
   .summary + .summary{ margin-top:5pt; }
 
   /* Sections */
-  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:10pt 0 5pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
+  h2{ font-size:10.5pt; font-weight:500; text-transform:uppercase; letter-spacing:0.04em; color:var(--ink); margin:9pt 0 5pt; padding-bottom:2pt; border-bottom:1px solid var(--rule); display:flex; justify-content:space-between; align-items:flex-end; }
 
   /* Entries */
-  .entry{ margin-bottom:6pt; }
+  .entry{ margin-bottom:5pt; }
   .entry-head{ display:flex; justify-content:space-between; align-items:baseline; gap:10pt; }
   .role{ font-size:10.5pt; }
   .role b{ font-weight:700; }
@@ -46,14 +46,14 @@
   .meta .loc{ margin-right:10pt; }
   .meta .dt{ color:var(--ink); }
   ul.b{ margin:2pt 0 0; padding:0 0 0 12pt; }
-  ul.b li{ color:var(--body); margin:0 0 1.5pt; padding-left:1pt; }
+  ul.b li{ color:var(--body); margin:0 0 1.25pt; padding-left:1pt; }
   ul.b li::marker{ color:var(--muted); }
   .pubs{ margin:1pt 0 0 13pt; font-size:9pt; color:var(--muted); }
   .pubs .sep{ display:inline-block; width:12pt; }
   .desc{ margin:1pt 0 0; color:var(--body); }
 
   /* Skills: single column rows */
-  .rows .entry{ margin-bottom:2pt; }
+  .rows .entry{ margin-bottom:1.5pt; }
   .skills p{ margin:0 0 1pt; color:var(--body); }
   .skills b{ font-weight:700; color:var(--ink); }
 
@@ -122,8 +122,8 @@
     </div>
     <ul class="b">
       <li class="two">Oversaw generation and QC of 10M+ Cell Painting images of 100,000+ compounds (nearly every commercial bioactive), the training data for models that predict bioactivity and help medicinal chemists design better drugs.</li>
-      <li>Led image labeling and feature extraction: morphology-change bioactivity ~10× more sensitive than assays.</li>
-      <li>Partnered on an interpretable liver-injury (DILI) risk model reaching 0.92 AUC; presented at SOT and ACT.</li>
+      <li class="two">Invented two low-noise algorithms (pseudo-labels, pre-MolPhenix; a simple math method) to detect subtle morphology change, for batch drift QC and as the top inputs to a 0.92 AUC liver-injury (DILI) model.</li>
+      <li>Led image labeling and U-Net segmentation, in production for 1+ year.</li>
     </ul>
     <p class="pubs">Nat Commun 2026 <span class="ref"><a href="#pub4">[4]</a></span><span class="sep"> </span>Cell Syst 2026 <span class="ref"><a href="#pub3">[3]</a></span><span class="sep"> </span>bioRxiv 2026 <span class="ref"><a href="#pre1">[P1]</a></span></p>
   </div>
