@@ -6,7 +6,7 @@
 """
 import re,sys
 def pubs_of(s):
-    sec=s.split('Peer-reviewed publications',1)[1].split('<h2>',1)[0]
+    sec=s.split('<h2>Publications</h2>',1)[1].split('<h2>',1)[0]
     return re.findall(r'<li[^>]*>(.*?)</li>',sec,re.S)
 def check(f):
     s=open(f,encoding='utf-8').read(); entries=pubs_of(s); bad=[]
