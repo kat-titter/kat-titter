@@ -96,7 +96,7 @@
 
   /* ---- CV: flowing multi-page document on the shared resume styles ---- */
   @page{ size:Letter; margin:0.75in 0.75in 0.8in;
-    @bottom-right{ content:"page " counter(page) " of " counter(pages); font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; } }
+    @bottom-right{ content:counter(page) "/" counter(pages); font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; } }
   .doc{ max-width:8.5in; margin:0 auto; }
   .pos{ text-wrap:balance; }
   .doc p, .doc li{ text-wrap:pretty; }
