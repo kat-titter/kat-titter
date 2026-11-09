@@ -98,7 +98,6 @@
   @page{ size:Letter; margin:0.75in 0.75in 0.8in;
     @bottom-right{ content:"page " counter(page) " of " counter(pages); font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; } }
   .doc{ max-width:7.3in; margin:0 auto; }
-  h1 .cvtag{ font-weight:400; color:var(--muted); font-size:13pt; letter-spacing:0; margin-left:10pt; }
   h2{ break-after:avoid; }
   ul.b li, .entry-head{ break-inside:avoid; }
   ol.cites li{ break-inside:avoid; }
@@ -120,7 +119,7 @@
 <div class="doc">
 
   <header>
-    <h1><span class="kat">Kat</span>herine L. Titterton <span class="cvtag">Curriculum Vitae</span></h1>
+    <h1><span class="kat">Kat</span>herine L. Titterton</h1>
     <div class="pos">Scientist-engineer and technical storyteller in neuroscience, imaging and AI</div>
     <div class="hgrid">
       <div>
@@ -145,7 +144,7 @@
       <div class="meta"><span class="loc">San Francisco, CA</span><span class="dt">2023–2026</span></div>
     </div>
     <ul class="b">
-      <li>Oversaw generation and QC of 10M+ Cell Painting images of 100,000+ compounds (nearly every commercial bioactive), the training data for models that predict bioactivity and help medicinal chemists design better drugs.</li>
+      <li>Oversaw generation and QC of 10M+ Cell Painting images of 100,000+ compounds (nearly every commercial bioactive), the training data for models that predict bioactivity profiles from structure alone, before synthesis.</li>
       <li>Invented two low-noise algorithms for morphology change, ~10× more sensitive than conventional cytotoxicity assays, which made them top features of a 0.92 AUC liver-injury (DILI) model; they also caught batch drift.</li>
       <li>Led image labeling specs, QC and PyTorch U-Net segmentation of the dataset, benchmarked against Segment Anything (SAM); models in production for 1+ year.</li>
     </ul>
@@ -212,13 +211,10 @@
   </div>
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Graduate coursework</span></div>
-      <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2019–2020</span></div>
+      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Undergraduate and graduate coursework</span></div>
+      <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2017–2020</span></div>
     </div>
-    <ul class="b">
-      <li>Introduction to Programming in Python with Applications in Life Science (CSCI E-7, 2019), taken while working full-time at AbbVie.</li>
-      <li>Image Processing and Computer Vision (CSCI S-25, 2020): segmentation, feature extraction and early deep models including U-Nets.</li>
-    </ul>
+    <p class="desc">Python, computer vision, social medicine, biochemistry.</p>
   </div>
 
   <h2>Publications</h2>
@@ -252,23 +248,23 @@
   <h2>Projects</h2>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot"> </span><span class="title">AI × bio startup: one map of every lab's controls, to tell if cells look normal</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/datum-line">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">On 93,228 public control wells from 1,872 plates in 11 labs, a classifier names the lab from controls alone at 99.9% balanced accuracy, and a lab's drift predicts disagreement on known answers.</p>
+    <p class="desc">On public control wells from many labs, a classifier names the lab from controls alone, and a lab's drift predicts disagreement on known answers.</p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/every-line-is-a-loop/">Every line is a loop</a></b><span class="dot"> </span><span class="title">A periodic table for biology</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/every-line-is-a-loop">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">Interactive essay that reads 613 published BioModels and counts their circuits into a table: every switch has a self-feeding loop and every clock a brake. Live figures of the lac switch, a circadian clock and chemotaxis.</p>
+    <p class="desc">Interactive essay that reads the published BioModels and counts their circuits into a table: every switch has a self-feeding loop and every clock a brake. Live figures of the lac switch, a circadian clock and chemotaxis.</p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public tracker kept current by a weekly agent</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/overdose-watch">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">Official 12-month overdose death counts (CDC, state and county health departments, the SF medical examiner) and primary-sourced incident reports on one map and timeline, refreshed every Monday by a scheduled Claude Code agent.</p>
+    <p class="desc">Official overdose death counts (CDC, state and county health departments, the SF medical examiner) and primary-sourced incident reports on one map and timeline, refreshed every Monday by a scheduled Claude Code agent.</p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot"> </span><span class="title">AI slop as vanitas</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/vanitas-veritas">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">An 8.5-minute 4K loop melting eight vanitas portraits with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop, with <a href="https://kat-titter.github.io/veritas/">an interactive web piece</a>.</p>
+    <p class="desc">A 4K video loop melting vanitas portraits with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop, with <a href="https://kat-titter.github.io/veritas/">an interactive web piece</a>.</p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b>treble</b><span class="dot"> </span><span class="title">A one-hour DJ set coded with AI</span></div><div class="meta"><span class="ask">code on request</span><span class="dt">2026</span></div></div>
-    <p class="desc">Beat-aligned transitions and a listening studio, refined by ear over 44 versions and growing into a general tool. Hear <a href="https://soundcloud.com/ex_gf/pilot">p[i]lot</a> (picked by hand), <a href="https://soundcloud.com/ex_gf/p-ai-lot">p[ai]lot</a> (full algorithm) and <a href="https://soundcloud.com/ex_gf/ex_gf_b-ur-ning">b[u][r]ning</a>.</p>
+    <div class="entry-head"><div class="role"><b>treble</b><span class="dot"> </span><span class="title">DJ-set software: a playlist in, a mixed set out</span></div><div class="meta"><span class="ask">code on request</span><span class="dt">2026</span></div></div>
+    <p class="desc">Beat-aligned transitions, a listening studio and a taste loop, where every kept transition teaches the engine. Hear its sets <a href="https://soundcloud.com/ex_gf/pilot">p[i]lot</a> (picked by hand), <a href="https://soundcloud.com/ex_gf/p-ai-lot">p[ai]lot</a> (full algorithm) and <a href="https://soundcloud.com/ex_gf/ex_gf_b-ur-ning">b[u][r]ning</a>.</p>
   </div>
   <div class="entry">
     <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot"> </span><span class="title">Graph-engineered agent harness: corrections become skills</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/claude-code-learns">code</a><span class="dt">2026</span></div></div>
