@@ -97,7 +97,9 @@
   /* ---- CV: flowing multi-page document on the shared resume styles ---- */
   @page{ size:Letter; margin:0.75in 0.75in 0.8in;
     @bottom-right{ content:"page " counter(page) " of " counter(pages); font-family:"IBM Plex Mono",Menlo,monospace; font-size:8.5pt; color:#4f4f4f; } }
-  .doc{ max-width:7.3in; margin:0 auto; }
+  .doc{ max-width:8.5in; margin:0 auto; }
+  .pos{ text-wrap:balance; }
+  .doc p, .doc li{ text-wrap:pretty; }
   h2{ break-after:avoid; }
   ul.b li, .entry-head{ break-inside:avoid; }
   ol.cites li{ break-inside:avoid; }
@@ -110,7 +112,7 @@
   .pubs{ break-before:avoid; }
   .doc > ul.b{ margin-bottom:2pt; }
   .ids{ font-size:8.5pt; color:var(--muted); }
-  @media screen{ .doc{ background:#fff; padding:0.6in; margin:12px auto; box-shadow:0 1px 6px rgba(0,0,0,.15); } }
+  @media screen{ .doc{ background:#fff; padding:0.7in 0.75in 0.6in; margin:12px auto; box-shadow:0 1px 6px rgba(0,0,0,.15); } }
   @media screen and (max-width:860px){ .doc{ padding:16px; margin:0; box-shadow:none; } }
 </style>
 </head>
@@ -211,10 +213,10 @@
   </div>
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Undergraduate and graduate coursework</span></div>
+      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Coursework</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2017–2020</span></div>
     </div>
-    <p class="desc">Python, computer vision, social medicine, biochemistry.</p>
+    <p class="desc">Undergraduate and graduate: Python, computer vision, social medicine, biochemistry.</p>
   </div>
 
   <h2>Publications</h2>
