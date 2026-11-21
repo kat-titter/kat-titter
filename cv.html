@@ -104,7 +104,6 @@
   ul.b li, .entry-head{ break-inside:avoid; }
   ol.cites li{ break-inside:avoid; }
   .entry{ break-inside:avoid; }
-  ol.cites.talks li::marker{ content:""; }
   .meta a.code{ margin-right:10pt; color:var(--muted); text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px; }
   .meta .ask{ margin-right:10pt; }
   .desc a{ text-decoration:underline; text-decoration-color:var(--rule); text-underline-offset:2px; }
@@ -114,6 +113,7 @@
   .ids{ font-size:8.5pt; color:var(--muted); }
   @media screen{ .doc{ background:#fff; padding:0.7in 0.75in 0.6in; margin:12px auto; box-shadow:0 1px 6px rgba(0,0,0,.15); } }
   @media screen and (max-width:860px){ .doc{ padding:16px; margin:0; box-shadow:none; } }
+  .plabel{ font-family:"IBM Plex Mono",Menlo,monospace; color:var(--muted); font-weight:400; margin-right:3pt; }
 </style>
 </head>
 <body>
@@ -185,7 +185,7 @@
     </div>
     <ul class="b">
       <li>Cultured primary neurons weekly for 3+ years, supporting 10+ tau team scientists; scaled the culture from manual to automated by onboarding Integra liquid handlers.</li>
-      <li>Developed high-content tau aggregation assays in primary murine and human iPSC neurons (Revvity Opera, Harmony), with R dose-response pipelines that ranked tau immunotherapy candidates.</li>
+      <li>Co-developed high-content tau aggregation assays in primary murine and human iPSC neurons (Revvity Opera, Harmony), with R dose-response pipelines that ranked tau immunotherapy candidates.</li>
       <li>Screened anti-tau antibodies by high-content analysis in primary neurons (SBI2 2019).</li>
       <li>Tested next-gen microfluidic devices, keeping primary murine neurons alive 3+ months to model tau spread (SfN 2021).</li>
     </ul>
@@ -213,10 +213,10 @@
   </div>
   <div class="entry">
     <div class="entry-head">
-      <div class="role"><b>Harvard Extension School</b><span class="dot"> </span><span class="title">Coursework</span></div>
+      <div class="role"><b>Harvard Extension and Summer Schools</b><span class="dot"> </span><span class="title">Coursework</span></div>
       <div class="meta"><span class="loc">Cambridge, MA</span><span class="dt">2017–2020</span></div>
     </div>
-    <p class="desc">Undergraduate and graduate: Python, computer vision, social medicine, biochemistry.</p>
+    <p class="desc">Global Health and Social Medicine; Biochemistry; Introduction to Programming with Python; Computer Vision.</p>
   </div>
 
   <h2>Publications</h2>
@@ -237,7 +237,7 @@
   </ol>
 
   <h2>Talks &amp; posters</h2>
-  <ol class="cites talks">
+  <ol class="cites talks" start="9">
     <li><b>Titterton K</b>. Using AI to Combine Exposure, Metabolism, and Liver Function to Model DILI in Modern Molecules. Talk, <i>American College of Toxicology (ACT) Annual Meeting</i>, Phoenix, AZ, 2025. <a href="https://www.youtube.com/watch?v=5bPLiewTbFw">replay</a></li>
     <li><b>Titterton K</b>, Boiko D, Cabrera ÁA, Bäuerle A, Tyagi A, Saneinejad S, Beatson A, White B. Accurate and interpretable <i>in silico</i> clinical risk assessment for drug-induced liver injury (DILI) from molecular structure. <a href="https://www.macrofluidic.me/13558658-2025-sot">Poster</a>, <i>Society of Toxicology (SOT) Annual Meeting</i>, 2025.</li>
     <li><b>Titterton K</b>, et al. Development of a tau propagation neuronal microfluidic cell culture model for assessing inhibitors of tau propagation. <a href="https://www.macrofluidic.me/9001434-2021-sfn-poster">Poster</a>, <i>Society for Neuroscience (SfN) Global Connectome</i>, 2021.</li>
@@ -249,37 +249,40 @@
 
   <h2>Projects</h2>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot"> </span><span class="title">AI × bio startup: one map of every lab's controls, to tell if cells look normal</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/datum-line">code</a><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><span class="plabel">[A]</span><b><a href="https://kat-titter.github.io/datum-line/">Datum Line</a></b><span class="dot"> </span><span class="title">AI × bio startup: one map of every lab's controls, to tell if cells look normal</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/datum-line">code</a><span class="dt">2026</span></div></div>
     <p class="desc">On public control wells from many labs, a classifier names the lab from controls alone, and a lab's drift predicts disagreement on known answers.</p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/every-line-is-a-loop/">Every line is a loop</a></b><span class="dot"> </span><span class="title">A periodic table for biology</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/every-line-is-a-loop">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">Interactive essay that reads the published BioModels and counts their circuits into a table: every switch has a self-feeding loop and every clock a brake. Live figures of the lac switch, a circadian clock and chemotaxis.</p>
-  </div>
-  <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public tracker kept current by a weekly agent</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/overdose-watch">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">Official overdose death counts (CDC, state and county health departments, the SF medical examiner) and primary-sourced incident reports on one map and timeline, refreshed every Monday by a scheduled Claude Code agent.</p>
-  </div>
-  <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot"> </span><span class="title">AI slop as vanitas</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/vanitas-veritas">code</a><span class="dt">2026</span></div></div>
-    <p class="desc">A 4K video loop melting vanitas portraits with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop, with <a href="https://kat-titter.github.io/veritas/">an interactive web piece</a>.</p>
-  </div>
-  <div class="entry">
-    <div class="entry-head"><div class="role"><b>treble</b><span class="dot"> </span><span class="title">DJ-set software: a playlist in, a mixed set out</span></div><div class="meta"><span class="ask">code on request</span><span class="dt">2026</span></div></div>
-    <p class="desc">Beat-aligned transitions, a listening studio and a taste loop, where every kept transition teaches the engine. Hear its sets <a href="https://soundcloud.com/ex_gf/pilot">p[i]lot</a> (picked by hand), <a href="https://soundcloud.com/ex_gf/p-ai-lot">p[ai]lot</a> (full algorithm) and <a href="https://soundcloud.com/ex_gf/ex_gf_b-ur-ning">b[u][r]ning</a>.</p>
-  </div>
-  <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot"> </span><span class="title">Graph-engineered agent harness: corrections become skills</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/claude-code-learns">code</a><span class="dt">2026</span></div></div>
+    <div class="entry-head"><div class="role"><span class="plabel">[B]</span><b><a href="https://kat-titter.github.io/claude-code-learns/">claude-code-learns</a></b><span class="dot"> </span><span class="title">Graph-engineered agent harness: corrections become skills</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/claude-code-learns">code</a><span class="dt">2026</span></div></div>
     <p class="desc">Each correction becomes a skill; automated checks confirm every skill parses and loads when it should.</p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://www.macrofluidic.me/gallery">Bare Metal</a></b><span class="dot"> </span><span class="title">Solo generative-art exhibit, Human Tech Week SF, with a <a href="https://www.macrofluidic.me/blog">post-hoc analysis</a></span></div><div class="meta"><span class="dt">2025</span></div></div>
+    <div class="entry-head"><div class="role"><span class="plabel">[C]</span><b><a href="https://kat-titter.github.io/every-line-is-a-loop/">Every line is a loop</a></b><span class="dot"> </span><span class="title">A periodic table for biology</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/every-line-is-a-loop">code</a><span class="dt">2026</span></div></div>
+    <p class="desc">Interactive essay that reads the published BioModels and counts their circuits into a table: every switch has a self-feeding loop and every clock a brake. Live figures of the lac switch, a circadian clock and chemotaxis.</p>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://x.com/KatTitterton/status/2056977100687761885">Vivarium 2.0</a></b><span class="dot"> </span><span class="title">Automated poison-dart-frog habitat with misting and live video</span></div><div class="meta"><span class="dt">2024</span></div></div>
+    <div class="entry-head"><div class="role"><span class="plabel">[D]</span><b><a href="https://kat-titter.github.io/peptides/">Peptide Atlas</a></b><span class="dot"> </span><span class="title">Illustrated, interactive textbook chapter on peptide therapeutics</span></div><div class="meta"><span class="dt">2026</span></div></div>
   </div>
   <div class="entry">
-    <div class="entry-head"><div class="role"><b><a href="https://docs.google.com/presentation/d/11FDIWB3ggNYkUqzwoIB4Nc3ZkTIs9wbMEJBKeHplSGE/edit">OpenTronsformers</a></b><span class="dot"> </span><span class="title">LLM copilot for the OT-2 lab robot; 2nd-place team, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
+    <div class="entry-head"><div class="role"><span class="plabel">[E]</span><b><a href="https://kat-titter.github.io/vanitas-veritas/">Vanitas / Veritas</a></b><span class="dot"> </span><span class="title">AI slop as vanitas</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/vanitas-veritas">code</a><span class="dt">2026</span></div></div>
+    <p class="desc">A 4K video loop melting vanitas portraits with open-source diffusion (Stable Diffusion 1.5, LCM-LoRA, Real-ESRGAN) on a laptop, with <a href="https://kat-titter.github.io/veritas/">an interactive web piece</a>.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head"><div class="role"><span class="plabel">[F]</span><b><a href="https://docs.google.com/presentation/d/11FDIWB3ggNYkUqzwoIB4Nc3ZkTIs9wbMEJBKeHplSGE/edit">OpenTronsformers</a></b><span class="dot"> </span><span class="title">LLM copilot for the OT-2 lab robot; 2nd-place team, BioHack NYC</span></div><div class="meta"><span class="dt">2023</span></div></div>
+  </div>
+  <div class="entry">
+    <div class="entry-head"><div class="role"><span class="plabel">[G]</span><b>treble</b><span class="dot"> </span><span class="title">DJ-set software: a playlist in, a mixed set out</span></div><div class="meta"><span class="ask">code on request</span><span class="dt">2026</span></div></div>
+    <p class="desc">Beat-aligned transitions, a listening studio and a taste loop, where every kept transition teaches the engine. Hear its sets <a href="https://soundcloud.com/ex_gf/pilot">p[i]lot</a> (picked by hand), <a href="https://soundcloud.com/ex_gf/p-ai-lot">p[ai]lot</a> (full algorithm) and <a href="https://soundcloud.com/ex_gf/ex_gf_b-ur-ning">b[u][r]ning</a>.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head"><div class="role"><span class="plabel">[H]</span><b><a href="https://www.macrofluidic.me/gallery">Bare Metal</a></b><span class="dot"> </span><span class="title">Solo generative-art exhibit, Human Tech Week SF, with a <a href="https://www.macrofluidic.me/blog">post-hoc analysis</a></span></div><div class="meta"><span class="dt">2025</span></div></div>
+  </div>
+  <div class="entry">
+    <div class="entry-head"><div class="role"><span class="plabel">[I]</span><b><a href="https://kat-titter.github.io/overdose-watch/">Overdose Watch</a></b><span class="dot"> </span><span class="title">Public tracker kept current by a weekly agent</span></div><div class="meta"><a class="code" href="https://github.com/kat-titter/overdose-watch">code</a><span class="dt">2026</span></div></div>
+    <p class="desc">Official overdose death counts (CDC, state and county health departments, the SF medical examiner) and primary-sourced incident reports on one map and timeline, refreshed every Monday by a scheduled Claude Code agent.</p>
+  </div>
+  <div class="entry">
+    <div class="entry-head"><div class="role"><span class="plabel">[J]</span><b><a href="https://x.com/KatTitterton/status/2056977100687761885">Vivarium 2.0</a></b><span class="dot"> </span><span class="title">Automated poison-dart-frog habitat with misting and live video</span></div><div class="meta"><span class="dt">2024</span></div></div>
   </div>
 
   <h2>Honors &amp; awards</h2>
