@@ -2,7 +2,6 @@
 # Check references and fit, then render the PDFs from the self-contained HTML sources with headless Chrome.
 set -e
 cd "$(dirname "$0")"
-python3 share.py --stamp   # tab icon + share tags into every page; plain share.py also redraws the PNGs
 python3 check_refs.py
 python3 measure_fit.py resume.html
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
