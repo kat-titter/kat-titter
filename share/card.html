@@ -1,0 +1,25 @@
+<!doctype html>
+<!-- Share card: the resume's header at card size, with the tab mark. Laid out at 1200 x 630 (CARD_W, CARD_H in share.py match); copies resume.html's header; the mark is icon.svg. Redraw with `python3 share.py`. -->
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#fff}
+.c{box-sizing:border-box;width:1200px;height:630px;padding:72px 80px 60px;display:flex;flex-direction:column;justify-content:space-between;color:#1a1a1a;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.mid{display:flex;align-items:center;justify-content:space-between;gap:56px}
+h1{margin:0;font-size:84px;font-weight:700;letter-spacing:-1.6px;line-height:1.05}
+h1 .kat{font-family:"IBM Plex Mono",Menlo,monospace;font-weight:500;letter-spacing:-3px;margin-right:2px}
+.pos{margin:22px 0 0;font:400 27px/1.4 "IBM Plex Mono",Menlo,monospace;color:#262626;max-width:760px}
+.foot{display:flex;justify-content:space-between;border-top:1px solid #c4c4c4;padding-top:18px;font:400 19px "IBM Plex Mono",Menlo,monospace;color:#4f4f4f;text-transform:uppercase;letter-spacing:.04em}
+.foot span:last-child{text-transform:none;letter-spacing:0}
+</style>
+<div class="c">
+  <div></div>
+  <div class="mid">
+    <div>
+      <h1><span class="kat">Kat</span>herine Titterton</h1>
+      <p class="pos">Scientist-engineer and technical storyteller in neuroscience, imaging and AI</p>
+    </div>
+    <img src="icon.svg" width="170" height="170" alt="">
+  </div>
+  <div class="foot"><span>Resume · CV</span><span>kat-titter.github.io/kat-titter</span></div>
+</div>
